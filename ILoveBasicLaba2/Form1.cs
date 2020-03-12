@@ -58,8 +58,8 @@ namespace ILoveBasicLaba2
 
             var g = tabPage3.CreateGraphics();
             g.Clear(Color.White);
-            g.DrawBezier(new Pen(Color.Black, 3), 
-                new Point(10, 100), new Point(100, 10), 
+            g.DrawBezier(new Pen(Color.Black, 3),
+                new Point(10, 100), new Point(100, 10),
                 new Point(150, 150), new Point(200, 100));
         }
 
@@ -80,13 +80,13 @@ namespace ILoveBasicLaba2
             g.Clear(Color.White);
 
             g.DrawBeziers(
-                new Pen(Color.Black, 3), 
-                new Point[] { 
+                new Pen(Color.Black, 3),
+                new Point[] {
                     new Point(10, 100), new Point(75, 10),
                     new Point(80, 50), new Point(10, 150),
                     new Point(125, 80), new Point(175, 200),
-                    new Point(200, 80) 
-                } 
+                    new Point(200, 80)
+                }
                 );
 
         }
@@ -116,7 +116,7 @@ namespace ILoveBasicLaba2
             float endAngle = 120.0F;
 
             e.Graphics.FillPie(
-                new SolidBrush(Color.Blue), x, y, width, 
+                new SolidBrush(Color.Blue), x, y, width,
                 height, startAngle, endAngle);
         }
 
@@ -140,9 +140,9 @@ namespace ILoveBasicLaba2
 
             var rect = new Rectangle(10, 50, 250, 150);
             float[] angles = new float[] { 0, 130, 205, 290, 360 };
-            var colors = new Color[] { 
-                Color.LightGoldenrodYellow, Color.PaleTurquoise, 
-                Color.RoyalBlue, Color.Purple 
+            var colors = new Color[] {
+                Color.LightGoldenrodYellow, Color.PaleTurquoise,
+                Color.RoyalBlue, Color.Purple
             };
             for (int i = 0; i < angles.Length - 1; i++)
             {
@@ -284,8 +284,8 @@ namespace ILoveBasicLaba2
             //pe.Graphics.FillRectangle(myBrush, New Rectangle(0, 0, 200, 200))
 
             var grBrush = new PathGradientBrush(new PointF[] {
-                new PointF(30, 0), new PointF(60, 0), new PointF(90, 30), 
-                new PointF(90, 60), new PointF(60, 90), new PointF(30, 90), 
+                new PointF(30, 0), new PointF(60, 0), new PointF(90, 30),
+                new PointF(90, 60), new PointF(60, 90), new PointF(30, 90),
                 new PointF(0, 60), new PointF(0, 30)
             });
 
@@ -377,12 +377,12 @@ namespace ILoveBasicLaba2
             //' Закрашиваем путь градиентной заливкой
             //pe.Graphics.FillPath(linGrBrush, graphPath)
 
-            var linGrBrush = new LinearGradientBrush(new Point(0, 10), new Point(200, 10), 
+            var linGrBrush = new LinearGradientBrush(new Point(0, 10), new Point(200, 10),
                 Color.DarkOliveGreen, Color.DarkOrchid);
 
             PointF[] FirstCurvePoints = new PointF[] {
                 new PointF(0.0F, 0.0F),
-                new PointF(100.0F, 50.0F), 
+                new PointF(100.0F, 50.0F),
                 new PointF(200.0F, 5.0F),
                 new PointF(250.0F, 50.0F)
             };
@@ -450,7 +450,7 @@ namespace ILoveBasicLaba2
 
             var MyPath = new GraphicsPath();
             MyPath.AddRectangle(new Rectangle(0, 0, 200, 100));
-            
+
             var myBrush = new PathGradientBrush(MyPath);
             myBrush.SurroundColors = new Color[] { Color.Red };
             myBrush.CenterColor = Color.Aqua;
@@ -460,6 +460,43 @@ namespace ILoveBasicLaba2
             myBrush.FocusScales = new PointF(0.2F, 0.5F);
             e.Graphics.TranslateTransform(0.0F, 150.0F);
             e.Graphics.FillPath(myBrush, MyPath);
+        }
+
+        private void tabPage14_Paint(object sender, PaintEventArgs e)
+        {
+            //' Создаем путь, содержащий полигон
+            //Dim path As New GraphicsPath
+            //Dim Mypoints As PointF() = {
+            //    New Point(0, 200), _
+            //New Point(200, 0), New Point(400, 200), _
+            //New Point(200, 400)}
+            //path.AddPolygon(Mypoints)
+
+            //' Используем путь для создания кисти
+            //Dim pthGrBrush As New PathGradientBrush(path)
+            //' Размещаем центральную точку,
+            //' не являющуюся центром полигона
+            //pthGrBrush.CenterPoint = New PointF(120, 40)
+            //pthGrBrush.CenterColor = Color.DarkRed
+
+            //Dim colors As Color() = { Color.CornflowerBlue}
+            //pthGrBrush.SurroundColors = colors
+            //pe.Graphics.FillPolygon(pthGrBrush, Mypoints)
+
+            var path = new GraphicsPath();
+            var Mypoints = new PointF[] {
+                new Point(0, 200),
+                new Point(200, 0), 
+                new Point(400, 200),
+                new Point(200, 400)
+            };
+            path.AddPolygon(Mypoints);
+
+            var pthGrBrush = new PathGradientBrush(path);
+            pthGrBrush.CenterPoint = new PointF(120, 40);
+            pthGrBrush.CenterColor = Color.DarkRed;
+            pthGrBrush.SurroundColors = new Color[] { Color.CornflowerBlue };
+            e.Graphics.FillPolygon(pthGrBrush, Mypoints);
         }
     }
 }            
