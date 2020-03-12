@@ -200,6 +200,8 @@ namespace ILoveBasicLaba2
             );
         }
 
+
+
         private void tabPage9_Paint(object sender, PaintEventArgs e)
         {
             //tabPage1_PaintDim myGraphicsPath As New GraphicsPath
@@ -234,7 +236,7 @@ namespace ILoveBasicLaba2
             );
             grPath.AddString(
                 "О сколько нам открытий...", new FontFamily("Comic Sans Ms"),
-                0, 32, new PointF(50, 50), new StringFormat()
+                0, 32, new PointF(50, 50), StringFormat.GenericDefault
             );
             grPath.AddPolygon(
                 new PointF[] {
@@ -349,6 +351,53 @@ namespace ILoveBasicLaba2
             var img = Resources.Texture;
             e.Graphics.DrawImage(img, 0, 0, img.Width, img.Height);
             e.Graphics.DrawEllipse(new Pen(new TextureBrush(img), 60), 20, 20, 250, 200);
+        }
+
+        private void tabPage8_Paint(object sender, PaintEventArgs e)
+        {
+
+            //Dim linGrBrush As New LinearGradientBrush(New Point(0, 10), _
+            //New Point(200, 10), Color.DarkOliveGreen, Color.DarkOrchid)
+            //Dim FirstCurvePoints As PointF() = {
+            //New PointF(0.0F, 0.0F), _
+            //New PointF(100.0F, 50.0F), New PointF(200.0F, 5.0F), _
+            //New PointF(250.0F, 50.0F)}
+
+            //Dim SecondCurvePoints As PointF() = {
+            //New PointF(300.0F, 100.0F), _
+            //New PointF(350.0F, 200.0F), New PointF(200.0F, 200.0F), _
+            //New PointF(130.0F, 230.0F)}
+
+            //    ' Объявляем путь
+            //Dim graphPath As New GraphicsPath
+            //' Добавляем к пути первый полигон
+            //graphPath.AddPolygon(FirstCurvePoints)
+            //' Добавляем к пути второй полигон
+            //graphPath.AddPolygon(SecondCurvePoints)
+            //' Закрашиваем путь градиентной заливкой
+            //pe.Graphics.FillPath(linGrBrush, graphPath)
+
+            var linGrBrush = new LinearGradientBrush(new Point(0, 10), new Point(200, 10), 
+                Color.DarkOliveGreen, Color.DarkOrchid);
+
+            PointF[] FirstCurvePoints = new PointF[] {
+                new PointF(0.0F, 0.0F),
+                new PointF(100.0F, 50.0F), 
+                new PointF(200.0F, 5.0F),
+                new PointF(250.0F, 50.0F)
+            };
+
+            PointF[] SecondCurvePoints = new PointF[] {
+                new PointF(300.0F, 100.0F),
+                new PointF(350.0F, 200.0F),
+                new PointF(200.0F, 200.0F),
+                new PointF(130.0F, 230.0F)
+            };
+
+            var graphPath = new GraphicsPath();
+            graphPath.AddPolygon(FirstCurvePoints);
+            graphPath.AddPolygon(SecondCurvePoints);
+            e.Graphics.FillPath(linGrBrush, graphPath);
         }
     }
 }            
