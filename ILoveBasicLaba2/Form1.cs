@@ -188,7 +188,8 @@ namespace ILoveBasicLaba2
                 new PointF(130.0F, 230.0F)
             };
             e.Graphics.FillPolygon(
-                new HatchBrush(
+                new HatchBrush
+                (
                     HatchStyle.DarkUpwardDiagonal,
                     Color.DarkGoldenrod,
                     Color.Crimson
