@@ -712,5 +712,22 @@ namespace ILoveBasicLaba2
                 tabPage27.BackgroundImage = Image.FromFile(dlg.FileName);
             }
         }
+
+        private void tabPage29_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim img As Image
+            //img = Image.FromFile("c:\Sea.jpg")
+            //Dim Point1 As New Point(50, 50)
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //G.DrawImage(img, Point1)
+
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = Convert.ToInt32(numericUpDown1.Value) - 1;
+        }
     }
 }            
