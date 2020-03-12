@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ILoveBasicLaba2.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -334,6 +335,20 @@ namespace ILoveBasicLaba2
             intrBrush.InterpolationColors = cb;
 
             e.Graphics.FillRectangle(intrBrush, 0, 0, 200, 200);
+        }
+
+        private void tabPage15_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim img As Image
+            //img = Image.FromFile("c:/Texture.jpg")
+            //Dim tBrush As New TextureBrush(img)
+            //Dim texturedPen As New Pen(tBrush, 60)
+            //pe.Graphics.DrawImage(img, 0, 0, img.Width, img.Height)
+            //pe.Graphics.DrawEllipse(texturedPen, 20, 20, 250, 200)
+
+            var img = Resources.Texture;
+            e.Graphics.DrawImage(img, 0, 0, img.Width, img.Height);
+            e.Graphics.DrawEllipse(new Pen(new TextureBrush(img), 60), 20, 20, 250, 200);
         }
     }
 }            
