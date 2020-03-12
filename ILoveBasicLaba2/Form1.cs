@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -486,7 +487,7 @@ namespace ILoveBasicLaba2
             var path = new GraphicsPath();
             var Mypoints = new PointF[] {
                 new Point(0, 200),
-                new Point(200, 0), 
+                new Point(200, 0),
                 new Point(400, 200),
                 new Point(200, 400)
             };
@@ -497,6 +498,193 @@ namespace ILoveBasicLaba2
             pthGrBrush.CenterColor = Color.DarkRed;
             pthGrBrush.SurroundColors = new Color[] { Color.CornflowerBlue };
             e.Graphics.FillPolygon(pthGrBrush, Mypoints);
+        }
+
+        private void tabPage17_Paint(object sender, PaintEventArgs e)
+        {
+            // 'Создаем первый путь
+            // Dim FirstPath As New GraphicsPath
+            // 'Добавляем к первому путиэллипс
+            // FirstPath.AddEllipse(New Rectangle(0, 0, 200, 100))
+
+            // 'Добавляем к области первый путь
+            // Dim myRegion As New[Region](FirstPath)
+
+            //'Создаем второй путь
+            // Dim SecondPath As New GraphicsPath
+            // Dim myBrush As New SolidBrush(Color.Red)
+            // 'Добавляем прямоугольник ко второму пути
+            // SecondPath.AddRectangle(New Rectangle(50, 50, 250, 150))
+
+            // 'Вычитаем второй путь из области
+            // myRegion.Xor(SecondPath)
+            // pe.Graphics.FillRegion(myBrush, myRegion)
+
+
+            var fpath = new GraphicsPath();
+            fpath.AddEllipse(new Rectangle(0, 0, 200, 100));
+            var reg = new Region(fpath);
+
+            var spath = new GraphicsPath();
+            spath.AddRectangle(new Rectangle(50, 50, 250, 150));
+            reg.Xor(spath);
+
+            e.Graphics.FillRegion(new SolidBrush(Color.Red), reg);
+        }
+
+        private void tabPage19_Paint(object sender, PaintEventArgs e)
+        {
+            // Dim FirstPath As New GraphicsPath
+            // Dim SecondPath As New GraphicsPath
+
+            // ' Создаем эллипс и отображаем его на экране 
+            // ' с помощью черного цвета
+            // Dim regionRect As New Rectangle(20, 20, 100, 100)
+            // FirstPath.AddEllipse(regionRect)
+
+            // pe.Graphics.DrawPath(Pens.Black, FirstPath)
+
+
+            // ' Создаем второй эллипс, пересекающийся с первым, 
+            // 'и отображаем его на экране с помощью красного цвета
+            // Dim complementRect As New Rectangle(90, 30, 100, 100)
+            // SecondPath.AddEllipse(complementRect)
+
+            // pe.Graphics.DrawPath(Pens.Red, SecondPath)
+
+            // ' Создаем две области, используя соответственно 
+            // 'первый и второй пути
+            // Dim myRegion As New[Region](FirstPath)
+            //' Возвращаем дополнение первой области 
+            // 'при объединении со второй областью
+            // Dim complementRegion As New[Region](SecondPath)
+            //' Выполняем заливку области дополнения 
+            // 'синим цветом и изображаем ее на экране
+            // myRegion.Complement(SecondPath)
+            // ' Заливаем дополнение синим цветом
+            // Dim myBrush As New SolidBrush(Color.Blue)
+            // pe.Graphics.FillRegion(myBrush, myRegion)
+            var fPath = new GraphicsPath();
+            fPath.AddEllipse(new Rectangle(20, 20, 100, 100));
+            e.Graphics.DrawPath(Pens.Black, fPath);
+
+            var sPath = new GraphicsPath();
+            sPath.AddEllipse(new Rectangle(90, 30, 100, 100));
+            e.Graphics.DrawPath(Pens.Red, sPath);
+
+            var reg = new Region(fPath);
+            reg.Complement(sPath);
+            e.Graphics.FillRegion(new SolidBrush(Color.Blue), reg);
+        }
+
+        private void tabPage21_Paint(object sender, PaintEventArgs e)
+        {
+            // Dim FirstPath As New GraphicsPath
+            // Dim SecondPath As New GraphicsPath
+
+            // ' Создаем первый эллипс и отображаем 
+            // 'его на экране с помощью черного цвета
+            // Dim regionRect As New Rectangle(20, 20, 100, 100)
+            // FirstPath.AddEllipse(regionRect)
+            // pe.Graphics.DrawPath(Pens.Black, FirstPath)
+            // ' Создаем второй эллипс и отображаем его 
+            // 'на экране с помощью красного цвета
+            // Dim complementRect As New RectangleF(90, 30, 100, 100)
+            // SecondPath.AddEllipse(complementRect)
+            // pe.Graphics.DrawPath(Pens.Red, SecondPath)
+            // ' Создаем область, используя первый эллипс
+            // Dim myRegion As New[Region](FirstPath)
+            //' Возвращаем для области область пересечения 
+            // 'при объединении со вторым эллипсом
+            // myRegion.Intersect(SecondPath)
+            // ' Выполняем заливку области пересечения 
+            // 'синим цветом и отображаем ее на экране
+            // Dim myBrush As New SolidBrush(Color.Blue)
+            // pe.Graphics.FillRegion(myBrush, myRegion)
+            var fPath = new GraphicsPath();
+            fPath.AddEllipse(new Rectangle(20, 20, 100, 100));
+            e.Graphics.DrawPath(Pens.Black, fPath);
+
+            var sPath = new GraphicsPath();
+            sPath.AddEllipse(new Rectangle(90, 30, 100, 100));
+            e.Graphics.DrawPath(Pens.Red, sPath);
+
+            var reg = new Region(fPath);
+            reg.Intersect(sPath);
+            e.Graphics.FillRegion(new SolidBrush(Color.Blue), reg);
+
+        }
+
+        private void tabPage23_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim FirstRectangle As New Rectangle(100, 80, 3, 3)
+            //Dim SecondRectangle As New Rectangle(-60, -30, 120, 60)
+            //Dim graphics As Graphics = pe.Graphics
+            //Dim pen As New Pen(Color.Black)
+            //Dim graphicsContainer As GraphicsContainer
+            //graphics.FillEllipse(Brushes.Black, FirstRectangle)
+            //graphics.TranslateTransform(100, 80)
+            //graphicsContainer = graphics.BeginContainer()
+            //'Вращение на 45 градусов
+            //graphics.RotateTransform(45)
+            //graphics.DrawEllipse(pen, SecondRectangle)
+            //graphics.EndContainer(graphicsContainer)
+            //graphics.DrawEllipse(pen, SecondRectangle)
+
+            var g = e.Graphics;
+            g.FillEllipse(Brushes.Black, new Rectangle(100, 80, 3, 3));
+            g.TranslateTransform(100, 80);
+
+            var gc = g.BeginContainer();
+            g.RotateTransform(45);
+            g.DrawEllipse(Pens.Red, new Rectangle(-60, -30, 120, 60));
+            g.EndContainer(gc);
+            g.DrawEllipse(Pens.Blue, new Rectangle(-60, -30, 120, 60));
+        }
+
+        private void tabPage25_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim graphics As Graphics = pe.Graphics
+            //Dim innerContainer As GraphicsContainer
+            //Dim outerContainer As GraphicsContainer
+            //Dim brush As New SolidBrush(Color.Blue)
+            //Dim fontFamily As New FontFamily("Comic Sans MS")
+            //Dim font As New Font(fontFamily, 24, FontStyle.Regular, _
+            //GraphicsUnit.Pixel)
+            //graphics.TextRenderingHint = TextRenderingHint.AntiAlias
+            //outerContainer = graphics.BeginContainer()
+            //graphics.TextRenderingHint = TextRenderingHint.SingleBitPerPixel
+            //innerContainer = graphics.BeginContainer()
+            //graphics.TextRenderingHint = TextRenderingHint.AntiAlias
+            //graphics.DrawString("Внутренний контейнер", font, brush, New _
+            //PointF(0, 10))
+            //graphics.EndContainer(innerContainer)
+            //graphics.DrawString("Внешний контейнер", font, brush, New _
+            // PointF(0, 40))
+            //graphics.EndContainer(outerContainer)
+            //graphics.DrawString("Графический объект", font, brush, New _
+            //PointF(0, 80))
+            var g = e.Graphics;
+            var font = new Font(
+                new FontFamily("Comic Sans MS"), 24, 
+                FontStyle.Regular, GraphicsUnit.Pixel
+            );
+
+            g.TextRenderingHint = TextRenderingHint.AntiAlias;
+            var outer = g.BeginContainer();
+
+            g.TextRenderingHint = TextRenderingHint.SingleBitPerPixel;
+            var inner = g.BeginContainer();
+
+            g.TextRenderingHint = TextRenderingHint.AntiAlias;
+            g.DrawString("Внутренний контейнер", font, Brushes.Blue, new PointF(0, 10));
+            g.EndContainer(inner);
+
+            g.DrawString("Внешний контейнер", font, Brushes.Blue, new PointF(0, 50));
+            g.EndContainer(outer);
+
+            g.DrawString("Графический объект", font, Brushes.Blue, new PointF(0, 90));
+
         }
     }
 }            
