@@ -740,5 +740,99 @@ namespace ILoveBasicLaba2
 
             e.Graphics.DrawImage(new System.Drawing.Imaging.Metafile("..\\..\\..\\PictureGlava4\\phone.wmf"), new Point(50, 50));
         }
+
+        private void tabPage33_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim WMfont As New Font("Comic Sans MS", 40, FontStyle.Bold)
+            //Dim WMBrush As New SolidBrush(Color.FromArgb(92, 9, 97, 18))
+            //MyPictureBox.CreateGraphics.DrawString("MySite.ru", WMfont, _
+            //WMBrush, 100, 40)
+
+            //Dim img As Image
+            //img = Image.FromFile("c:\OlympicPark.jpg")
+            //MyPictureBox.Image = img
+
+            e.Graphics.DrawString("MySite.ru", 
+                new Font("Comic Sans MS", 40, FontStyle.Bold), 
+                new SolidBrush(Color.FromArgb(92, 9, 97, 30)), 
+                new Point(100, 40)
+            );
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //MyPictureBox.Image = Image.FromFile("c:/building.jpg")
+            //Dim bmap As New Bitmap(MyPictureBox.Image)
+            //MyPictureBox.Image = bmap
+            //Dim tempbmp As New Bitmap(MyPictureBox.Image)
+            //Dim DX As Integer = 1
+            //Dim DY As Integer = 1
+            //Dim red, green, blue As Integer
+            //Dim i, j As Integer
+            //With tempbmp
+            //    For i = DX To.Height - DX - 1
+            //        For j = DY To.Width - DY - 1
+            //            red = CInt((CInt(.GetPixel(j - 1, i - 1).R) + _
+            //            CInt(.GetPixel(j - 1, i).R) + _
+            //            CInt(.GetPixel(j - 1, i + 1).R) + _
+            //            CInt(.GetPixel(j, i).R) + _
+            //            CInt(.GetPixel(j + 1, i - 1).R) + _
+            //            CInt(.GetPixel(j + 1, i).R) + _
+            //            CInt(.GetPixel(j + 1, i + 1).R)) / 9)
+
+            //            green = CInt((CInt(.GetPixel(j - 1, i - 1).G) + _
+            //            CInt(.GetPixel(j - 1, i).G) + _
+            //            CInt(.GetPixel(j - 1, i + 1).G) + _
+            //            CInt(.GetPixel(j, i).G) + _
+            //            CInt(.GetPixel(j + 1, i - 1).G) + _
+            //            CInt(.GetPixel(j + 1, i).G) + _
+            //            CInt(.GetPixel(j + 1, i + 1).G)) / 9)
+
+            //            blue = CInt((CInt(.GetPixel(j - 1, i - 1).B) + _
+            //            CInt(.GetPixel(j - 1, i).B) + _
+            //            CInt(.GetPixel(j - 1, i + 1).B) + _
+            //            CInt(.GetPixel(j, i).B) + _
+            //            CInt(.GetPixel(j + 1, i - 1).B) + _
+            //            CInt(.GetPixel(j + 1, i).B) + _
+            //            CInt(.GetPixel(j + 1, i + 1).B)) / 9)
+
+            //            red = Math.Min(Math.Max(red, 0), 255)
+            //            green = Math.Min(Math.Max(green, 0), 255)
+            //            blue = Math.Min(Math.Max(blue, 0), 255)
+
+            //            bmap.SetPixel(j, i, Color.FromArgb(red, green, blue))
+
+            //            If i Mod 10 = 0 Then
+            //                MyPictureBox.Invalidate()
+            //                MyPictureBox.Refresh()
+            //                Me.Text = Int(100 * i / _
+            //                (MyPictureBox.Image.Height - 2)).ToString & "%"
+            //            End If
+
+            //        Next j
+            //    Next i
+            //End With
+            //Me.Text = "Создание эффекта сглаживания выполнено!"
+            var bmp = new Bitmap(tabPage35.BackgroundImage);
+            var tmp = new Bitmap(bmp);
+            int dx = 1, dy = 3;
+            for(int i = dx; i < tmp.Width - dx; i++)
+                for(int j = dy; j < tmp.Height - dy; j++)
+                {
+                    int r = 0, g = 0, b = 0;
+                    for (int di = -dx; di <= dx; di++)
+                        for (int dj = -dy; dj <= dy; dj++)
+                        {
+                            r += tmp.GetPixel(i + di, j + dj).R;
+                            g += tmp.GetPixel(i + di, j + dj).G;
+                            b += tmp.GetPixel(i + di, j + dj).B;
+                        }
+                    r /= (2 * dx + 1) * (2 * dy + 1);
+                    g /= (2 * dx + 1) * (2 * dy + 1);
+                    b /= (2 * dx + 1) * (2 * dy + 1);
+                    bmp.SetPixel(i, j, Color.FromArgb(r, g, b));
+                }
+            tabPage35.BackgroundImage = bmp;
+        }
     }
 }            

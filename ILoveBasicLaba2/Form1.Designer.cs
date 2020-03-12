@@ -64,7 +64,6 @@
             this.tabPage30 = new System.Windows.Forms.TabPage();
             this.tabPage31 = new System.Windows.Forms.TabPage();
             this.tabPage32 = new System.Windows.Forms.TabPage();
-            this.tabPage33 = new System.Windows.Forms.TabPage();
             this.tabPage34 = new System.Windows.Forms.TabPage();
             this.tabPage35 = new System.Windows.Forms.TabPage();
             this.tabPage36 = new System.Windows.Forms.TabPage();
@@ -83,10 +82,13 @@
             this.tabPage49 = new System.Windows.Forms.TabPage();
             this.tabPage50 = new System.Windows.Forms.TabPage();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabPage33 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage27.SuspendLayout();
+            this.tabPage35.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -525,16 +527,6 @@
             this.tabPage32.Text = "Пример 32";
             this.tabPage32.UseVisualStyleBackColor = true;
             // 
-            // tabPage33
-            // 
-            this.tabPage33.Location = new System.Drawing.Point(4, 26);
-            this.tabPage33.Name = "tabPage33";
-            this.tabPage33.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage33.Size = new System.Drawing.Size(859, 539);
-            this.tabPage33.TabIndex = 9;
-            this.tabPage33.Text = "Пример 33";
-            this.tabPage33.UseVisualStyleBackColor = true;
-            // 
             // tabPage34
             // 
             this.tabPage34.Location = new System.Drawing.Point(4, 26);
@@ -547,6 +539,8 @@
             // 
             // tabPage35
             // 
+            this.tabPage35.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.Building;
+            this.tabPage35.Controls.Add(this.button4);
             this.tabPage35.Location = new System.Drawing.Point(4, 26);
             this.tabPage35.Name = "tabPage35";
             this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
@@ -729,6 +723,29 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.Location = new System.Drawing.Point(0, 499);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(234, 39);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Размыть изображение";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // tabPage33
+            // 
+            this.tabPage33.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.OlympicPark;
+            this.tabPage33.Location = new System.Drawing.Point(4, 22);
+            this.tabPage33.Name = "tabPage33";
+            this.tabPage33.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage33.Size = new System.Drawing.Size(859, 543);
+            this.tabPage33.TabIndex = 9;
+            this.tabPage33.Text = "Пример 33";
+            this.tabPage33.UseVisualStyleBackColor = true;
+            this.tabPage33.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage33_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -744,6 +761,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage27.ResumeLayout(false);
+            this.tabPage35.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
@@ -806,6 +824,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
