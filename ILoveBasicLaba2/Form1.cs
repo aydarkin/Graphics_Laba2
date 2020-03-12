@@ -423,5 +423,43 @@ namespace ILoveBasicLaba2
             e.Graphics.FillPath(pthGrBrush, path);
 
         }
+
+        private void tabPage12_Paint(object sender, PaintEventArgs e)
+        {
+            //    ' Создаем путь содержащий отдельный прямоугольник
+            //Dim MyPath As New GraphicsPath
+            //MyPath.AddRectangle(New Rectangle(0, 0, 200, 100))
+
+            //' Создаем градиентную кисть, основанную на пути прямоугольника
+            //Dim myBrush As New PathGradientBrush(MyPath)
+            //' Цвет за пределами границы будет красным
+            //' Изменяем имя переменной для цвета
+            //Dim redColor As Color() = { Color.Red}
+            //    myBrush.SurroundColors = redColor
+            //' Цвет центра будет морской волны
+            //myBrush.CenterColor = Color.Aqua
+            //' Используем градиентную ксить для заливки прямоугольника
+            //pe.Graphics.FillPath(myBrush, MyPath)
+            //' Устанавливаем масштаб фокуса для градиентной кисти
+            //myBrush.FocusScales = New PointF(0.2F, 0.5F)
+            //' Используем градиентную кисть для заливки прямоугольника снова
+            //' Показываем этот залитый прямоугольник справа 
+            //‘от первого залитого прямоугольника
+            //pe.Graphics.TranslateTransform(0.0F, 150.0F)
+            //pe.Graphics.FillPath(myBrush, MyPath)
+
+            var MyPath = new GraphicsPath();
+            MyPath.AddRectangle(new Rectangle(0, 0, 200, 100));
+            
+            var myBrush = new PathGradientBrush(MyPath);
+            myBrush.SurroundColors = new Color[] { Color.Red };
+            myBrush.CenterColor = Color.Aqua;
+
+            e.Graphics.FillPath(myBrush, MyPath);
+
+            myBrush.FocusScales = new PointF(0.2F, 0.5F);
+            e.Graphics.TranslateTransform(0.0F, 150.0F);
+            e.Graphics.FillPath(myBrush, MyPath);
+        }
     }
 }            
