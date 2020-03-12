@@ -399,5 +399,29 @@ namespace ILoveBasicLaba2
             graphPath.AddPolygon(SecondCurvePoints);
             e.Graphics.FillPath(linGrBrush, graphPath);
         }
+
+        private void tabPage10_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim MyRectangle As New Rectangle(0, 0, 200, 200)
+            //Dim MyPen As New Pen(Color.Red, 2)
+
+            //Dim path As New GraphicsPath
+            //path.AddEllipse(MyRectangle)
+
+            //Dim pthGrBrush As New PathGradientBrush(path)
+            //' Центр пути будет красного цвета
+            //pthGrBrush.CenterColor = Color.FromArgb(255, 255, 0, 0)
+            //pe.Graphics.DrawEllipse(MyPen, MyRectangle)
+            //pe.Graphics.FillPath(pthGrBrush, path)
+
+            var path = new GraphicsPath();
+            path.AddEllipse(new Rectangle(0, 0, 200, 200));
+
+            var pthGrBrush = new PathGradientBrush(path);
+            pthGrBrush.CenterColor = Color.FromArgb(255, 255, 0, 0);
+            e.Graphics.DrawEllipse(new Pen(Color.Red, 2), new Rectangle(0, 0, 200, 200));
+            e.Graphics.FillPath(pthGrBrush, path);
+
+        }
     }
 }            
