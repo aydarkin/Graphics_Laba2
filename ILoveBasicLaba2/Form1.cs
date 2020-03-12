@@ -684,7 +684,33 @@ namespace ILoveBasicLaba2
             g.EndContainer(outer);
 
             g.DrawString("Графический объект", font, Brushes.Blue, new PointF(0, 90));
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Dim myStream As Stream
+            //Dim MyopenFileDialog As New OpenFileDialog()
+
+            //MyopenFileDialog.InitialDirectory = "c:\"
+            //MyopenFileDialog.Filter = "Images|*.GIF;*JPG;*.TIF;*BMP"
+            //MyopenFileDialog.FilterIndex = 2
+            //MyopenFileDialog.RestoreDirectory = True
+
+            //If MyopenFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            //    myStream = MyopenFileDialog.OpenFile()
+            //    If Not(myStream Is Nothing) Then
+            //    MyPictureBox.Image = Image.FromFile(MyopenFileDialog.FileName)
+            //        myStream.Close()
+            //    End If
+            //End If
+            var dlg = new OpenFileDialog();
+            dlg.Filter = "Images|*.GIF;*JPG;*.TIF;*BMP";
+            dlg.FilterIndex = 2;
+            dlg.RestoreDirectory = true;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                tabPage27.BackgroundImage = Image.FromFile(dlg.FileName);
+            }
         }
     }
 }            
