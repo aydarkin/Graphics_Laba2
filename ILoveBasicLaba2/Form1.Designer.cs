@@ -355,6 +355,7 @@
             this.tabPage17.TabIndex = 9;
             this.tabPage17.Text = "Пример 17";
             this.tabPage17.UseVisualStyleBackColor = true;
+            this.tabPage17.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage17_Paint);
             // 
             // tabPage18
             // 
@@ -375,6 +376,7 @@
             this.tabPage19.TabIndex = 9;
             this.tabPage19.Text = "Пример 19";
             this.tabPage19.UseVisualStyleBackColor = true;
+            this.tabPage19.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage19_Paint);
             // 
             // tabPage20
             // 
@@ -395,6 +397,7 @@
             this.tabPage21.TabIndex = 9;
             this.tabPage21.Text = "Пример 21";
             this.tabPage21.UseVisualStyleBackColor = true;
+            this.tabPage21.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage21_Paint);
             // 
             // tabPage22
             // 
@@ -415,6 +418,7 @@
             this.tabPage23.TabIndex = 9;
             this.tabPage23.Text = "Пример 23";
             this.tabPage23.UseVisualStyleBackColor = true;
+            this.tabPage23.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage23_Paint);
             // 
             // tabPage24
             // 
@@ -435,6 +439,7 @@
             this.tabPage25.TabIndex = 9;
             this.tabPage25.Text = "Пример 25";
             this.tabPage25.UseVisualStyleBackColor = true;
+            this.tabPage25.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage25_Paint);
             // 
             // tabPage26
             // 
