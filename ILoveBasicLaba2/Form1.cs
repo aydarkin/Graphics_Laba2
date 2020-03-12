@@ -427,5 +427,43 @@ namespace ILoveBasicLaba2
             reg.Complement(sPath);
             e.Graphics.FillRegion(new SolidBrush(Color.Blue), reg);
         }
+
+        private void tabPage21_Paint(object sender, PaintEventArgs e)
+        {
+            // Dim FirstPath As New GraphicsPath
+            // Dim SecondPath As New GraphicsPath
+
+            // ' Создаем первый эллипс и отображаем 
+            // 'его на экране с помощью черного цвета
+            // Dim regionRect As New Rectangle(20, 20, 100, 100)
+            // FirstPath.AddEllipse(regionRect)
+            // pe.Graphics.DrawPath(Pens.Black, FirstPath)
+            // ' Создаем второй эллипс и отображаем его 
+            // 'на экране с помощью красного цвета
+            // Dim complementRect As New RectangleF(90, 30, 100, 100)
+            // SecondPath.AddEllipse(complementRect)
+            // pe.Graphics.DrawPath(Pens.Red, SecondPath)
+            // ' Создаем область, используя первый эллипс
+            // Dim myRegion As New[Region](FirstPath)
+            //' Возвращаем для области область пересечения 
+            // 'при объединении со вторым эллипсом
+            // myRegion.Intersect(SecondPath)
+            // ' Выполняем заливку области пересечения 
+            // 'синим цветом и отображаем ее на экране
+            // Dim myBrush As New SolidBrush(Color.Blue)
+            // pe.Graphics.FillRegion(myBrush, myRegion)
+            var fPath = new GraphicsPath();
+            fPath.AddEllipse(new Rectangle(20, 20, 100, 100));
+            e.Graphics.DrawPath(Pens.Black, fPath);
+
+            var sPath = new GraphicsPath();
+            sPath.AddEllipse(new Rectangle(90, 30, 100, 100));
+            e.Graphics.DrawPath(Pens.Red, sPath);
+
+            var reg = new Region(fPath);
+            reg.Intersect(sPath);
+            e.Graphics.FillRegion(new SolidBrush(Color.Blue), reg);
+
+        }
     }
 }            
