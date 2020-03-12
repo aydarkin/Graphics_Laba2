@@ -722,7 +722,7 @@ namespace ILoveBasicLaba2
             //G = MyPictureBox.CreateGraphics
             //G.DrawImage(img, Point1)
 
-
+            e.Graphics.DrawImage(Resources.Sea, new Point(50, 50));
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
