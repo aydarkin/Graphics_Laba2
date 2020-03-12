@@ -294,7 +294,46 @@ namespace ILoveBasicLaba2
             };
 
             e.Graphics.FillRectangle(grBrush, new Rectangle(0, 0, 200, 200));
+        }
 
+        private void tabPage13_Paint(object sender, PaintEventArgs e)
+        {
+            //' Вершины внешнего квадрата
+            //Dim myPoints As Point() = {
+            //    New Point(0, 0), _
+            //    New Point(200, 0), New Point(200, 200), New Point(0, 200)}
+            //' Градиентный путь не используется. 
+            //'Градиентная кисть строится прямо из массива точек
+            //Dim myBrush As New PathGradientBrush(myPoints)
+
+            //' Создаем массив цветов
+            //Dim colors As Color() = {
+            //        _
+            //   Color.FromArgb(255, 0, 128, 0), _
+            //   Color.FromArgb(255, 128, 0, 255), _
+            //   Color.FromArgb(255, 0, 128, 128)}
+            //Dim relativePositions As Single() = { 0.0F, 0.4F, 1.0F}
+            //Dim colorBlend As New ColorBlend
+            //colorBlend.Colors = colors
+            //colorBlend.Positions = relativePositions
+            //myBrush.InterpolationColors = colorBlend
+            //' Заливаем прямоугольник, больший по размерам, чем квадрат
+            //pe.Graphics.FillRectangle(myBrush, 0, 0, 200, 200)
+
+            var intrBrush = new PathGradientBrush(new Point[] {
+                new Point(0, 0), new Point(200, 0), new Point(200, 200), new Point(0, 200)
+            });
+
+            var cb = new ColorBlend();
+            cb.Colors = new Color[] {
+                Color.FromArgb(255, 0, 128, 0),
+                Color.FromArgb(255, 128, 0, 255),
+                Color.FromArgb(255, 0, 128, 128)
+            };
+            cb.Positions = new float[] { 0, 0.4f, 1 };
+            intrBrush.InterpolationColors = cb;
+
+            e.Graphics.FillRectangle(intrBrush, 0, 0, 200, 200);
         }
     }
 }            
