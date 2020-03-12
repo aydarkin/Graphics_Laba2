@@ -465,5 +465,32 @@ namespace ILoveBasicLaba2
             e.Graphics.FillRegion(new SolidBrush(Color.Blue), reg);
 
         }
+
+        private void tabPage23_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim FirstRectangle As New Rectangle(100, 80, 3, 3)
+            //Dim SecondRectangle As New Rectangle(-60, -30, 120, 60)
+            //Dim graphics As Graphics = pe.Graphics
+            //Dim pen As New Pen(Color.Black)
+            //Dim graphicsContainer As GraphicsContainer
+            //graphics.FillEllipse(Brushes.Black, FirstRectangle)
+            //graphics.TranslateTransform(100, 80)
+            //graphicsContainer = graphics.BeginContainer()
+            //'Вращение на 45 градусов
+            //graphics.RotateTransform(45)
+            //graphics.DrawEllipse(pen, SecondRectangle)
+            //graphics.EndContainer(graphicsContainer)
+            //graphics.DrawEllipse(pen, SecondRectangle)
+
+            var g = e.Graphics;
+            g.FillEllipse(Brushes.Black, new Rectangle(100, 80, 3, 3));
+            g.TranslateTransform(100, 80);
+
+            var gc = g.BeginContainer();
+            g.RotateTransform(45);
+            g.DrawEllipse(Pens.Red, new Rectangle(-60, -30, 120, 60));
+            g.EndContainer(gc);
+            g.DrawEllipse(Pens.Blue, new Rectangle(-60, -30, 120, 60));
+        }
     }
 }            
