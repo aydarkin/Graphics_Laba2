@@ -248,5 +248,53 @@ namespace ILoveBasicLaba2
             gr.FillPath(grBrush, grPath);
             gr.DrawPath(new Pen(Color.Black, 1), grPath);
         }
+
+        private void tabPage11_Paint(object sender, PaintEventArgs e)
+        {
+            //' Строим градиент, основанный на массиве точке
+            //Dim myPoints As PointF() = {
+            //        _
+            //New PointF(30, 0), _
+            //New PointF(60, 0), _
+            //New PointF(90, 30), _
+            //New PointF(90, 60), _
+            //New PointF(60, 90), _
+            //New PointF(30, 90), _
+            //New PointF(0, 60), _
+            //New PointF(0, 30)}
+
+            //Dim myBrush As New PathGradientBrush(myPoints)
+            //Dim colors As Color() = {
+            //        _
+            //   Color.FromArgb(255, 255, 0, 0), _
+            //   Color.FromArgb(255, 0, 255, 0), _
+            //   Color.FromArgb(255, 0, 0, 255), _
+            //   Color.FromArgb(255, 0, 255, 0), _
+            //   Color.FromArgb(255, 255, 0, 0), _
+            //   Color.FromArgb(255, 0, 255, 0), _
+            //   Color.FromArgb(255, 0, 0, 255), _
+            //   Color.FromArgb(255, 255, 0, 0)}
+            //    myBrush.SurroundColors = colors
+            //' Центр будет белым
+            //myBrush.CenterColor = Color.White
+            //' Используем градиентную кисть для заливки прямоугольника
+            //pe.Graphics.FillRectangle(myBrush, New Rectangle(0, 0, 200, 200))
+
+            var grBrush = new PathGradientBrush(new PointF[] {
+                new PointF(30, 0), new PointF(60, 0), new PointF(90, 30), 
+                new PointF(90, 60), new PointF(60, 90), new PointF(30, 90), 
+                new PointF(0, 60), new PointF(0, 30)
+            });
+
+            grBrush.SurroundColors = new Color[] {
+                Color.FromArgb(255, 255, 0, 0), Color.FromArgb(255, 0, 255, 0),
+                Color.FromArgb(255, 0, 0, 255), Color.FromArgb(255, 0, 255, 0),
+                Color.FromArgb(255, 255, 0, 0), Color.FromArgb(255, 0, 255, 0),
+                Color.FromArgb(255, 0, 0, 255), Color.FromArgb(255, 255, 0, 0)
+            };
+
+            e.Graphics.FillRectangle(grBrush, new Rectangle(0, 0, 200, 200));
+
+        }
     }
 }            
