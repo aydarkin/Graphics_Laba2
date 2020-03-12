@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -491,6 +492,52 @@ namespace ILoveBasicLaba2
             g.DrawEllipse(Pens.Red, new Rectangle(-60, -30, 120, 60));
             g.EndContainer(gc);
             g.DrawEllipse(Pens.Blue, new Rectangle(-60, -30, 120, 60));
+        }
+
+        private void tabPage25_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim graphics As Graphics = pe.Graphics
+            //Dim innerContainer As GraphicsContainer
+            //Dim outerContainer As GraphicsContainer
+            //Dim brush As New SolidBrush(Color.Blue)
+            //Dim fontFamily As New FontFamily("Comic Sans MS")
+            //Dim font As New Font(fontFamily, 24, FontStyle.Regular, _
+            //GraphicsUnit.Pixel)
+            //graphics.TextRenderingHint = TextRenderingHint.AntiAlias
+            //outerContainer = graphics.BeginContainer()
+            //graphics.TextRenderingHint = TextRenderingHint.SingleBitPerPixel
+            //innerContainer = graphics.BeginContainer()
+            //graphics.TextRenderingHint = TextRenderingHint.AntiAlias
+            //graphics.DrawString("Внутренний контейнер", font, brush, New _
+            //PointF(0, 10))
+            //graphics.EndContainer(innerContainer)
+            //graphics.DrawString("Внешний контейнер", font, brush, New _
+            // PointF(0, 40))
+            //graphics.EndContainer(outerContainer)
+            //graphics.DrawString("Графический объект", font, brush, New _
+            //PointF(0, 80))
+            var g = e.Graphics;
+            var font = new Font(
+                new FontFamily("Comic Sans MS"), 24, 
+                FontStyle.Regular, GraphicsUnit.Pixel
+            );
+
+            g.TextRenderingHint = TextRenderingHint.AntiAlias;
+            var outer = g.BeginContainer();
+
+            g.TextRenderingHint = TextRenderingHint.SingleBitPerPixel;
+            var inner = g.BeginContainer();
+
+            g.TextRenderingHint = TextRenderingHint.AntiAlias;
+            g.DrawString("Внутренний контейнер", font, Brushes.Blue, new PointF(0, 10));
+            g.EndContainer(inner);
+
+            g.DrawString("Внешний контейнер", font, Brushes.Blue, new PointF(0, 50));
+            g.EndContainer(outer);
+
+            g.DrawString("Графический объект", font, Brushes.Blue, new PointF(0, 90));
+
+
         }
     }
 }            
