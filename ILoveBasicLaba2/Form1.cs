@@ -729,5 +729,16 @@ namespace ILoveBasicLaba2
         {
             tabControl1.SelectedIndex = Convert.ToInt32(numericUpDown1.Value) - 1;
         }
+
+        private void tabPage31_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //G.Clear(Color.White)
+            //Dim myBitmap As New Imaging.Metafile("c:/phone.wmf")
+            //G.DrawImage(myBitmap, 10, 10)
+
+            e.Graphics.DrawImage(new System.Drawing.Imaging.Metafile("..\\..\\..\\PictureGlava4\\phone.wmf"), new Point(50, 50));
+        }
     }
 }            
