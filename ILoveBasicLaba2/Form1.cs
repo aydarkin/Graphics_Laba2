@@ -350,5 +350,37 @@ namespace ILoveBasicLaba2
             e.Graphics.DrawImage(img, 0, 0, img.Width, img.Height);
             e.Graphics.DrawEllipse(new Pen(new TextureBrush(img), 60), 20, 20, 250, 200);
         }
+
+        private void tabPage17_Paint(object sender, PaintEventArgs e)
+        {
+            // 'Создаем первый путь
+            // Dim FirstPath As New GraphicsPath
+            // 'Добавляем к первому путиэллипс
+            // FirstPath.AddEllipse(New Rectangle(0, 0, 200, 100))
+
+            // 'Добавляем к области первый путь
+            // Dim myRegion As New[Region](FirstPath)
+
+            //'Создаем второй путь
+            // Dim SecondPath As New GraphicsPath
+            // Dim myBrush As New SolidBrush(Color.Red)
+            // 'Добавляем прямоугольник ко второму пути
+            // SecondPath.AddRectangle(New Rectangle(50, 50, 250, 150))
+
+            // 'Вычитаем второй путь из области
+            // myRegion.Xor(SecondPath)
+            // pe.Graphics.FillRegion(myBrush, myRegion)
+
+
+            var fpath = new GraphicsPath();
+            fpath.AddEllipse(new Rectangle(0, 0, 200, 100));
+            var reg = new Region(fpath);
+
+            var spath = new GraphicsPath();
+            spath.AddRectangle(new Rectangle(50, 50, 250, 150));
+            reg.Xor(spath);
+
+            e.Graphics.FillRegion(new SolidBrush(Color.Red), reg);
+        }
     }
 }            
