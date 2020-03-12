@@ -198,5 +198,55 @@ namespace ILoveBasicLaba2
                 FillMode.Winding
             );
         }
+
+        private void tabPage9_Paint(object sender, PaintEventArgs e)
+        {
+            //tabPage1_PaintDim myGraphicsPath As New GraphicsPath
+            //Dim myPointArray As Point() = {
+            //  New Point(15, 50), _
+            //  New Point(20, 40), New Point(50, 30)}
+            //Dim myFontFamily As New FontFamily("Comic Sans Ms")
+            //        Dim myPointF As New PointF(50, 50)
+            //        Dim myStringFormat As New StringFormat
+            //        myGraphicsPath.AddArc(0, 0, 30, 60, 30, 180)
+            //        myGraphicsPath.AddCurve(myPointArray)
+            //        myGraphicsPath.AddString("О сколько нам открытий...", _
+            //        myFontFamily, 0, 32, myPointF, myStringFormat)
+            //        Dim CurvePoints As PointF() = {
+            //                New PointF(300.0F, 100.0F), _
+            //New PointF(350.0F, 200.0F), New PointF(200.0F, 200.0F), _
+            //New PointF(130.0F, 230.0F)}
+            //            myGraphicsPath.AddPolygon(CurvePoints)
+            //        Dim G As Graphics
+            //        G = MyPictureBox.CreateGraphics
+            //        Dim MyPen As New Pen(Color.Black, 1)
+            //        Dim pthGrBrush As New PathGradientBrush(myGraphicsPath)
+            //        pthGrBrush.CenterColor = Color.DarkRed
+            //        Dim colors As Color() = { Color.DarkViolet}
+            //        pthGrBrush.SurroundColors = colors
+            //        G.FillPath(pthGrBrush, myGraphicsPath)
+            //        G.DrawPath(MyPen, myGraphicsPath)
+            var grPath = new GraphicsPath();
+            grPath.AddArc(0, 0, 30, 60, 30, 180);
+            grPath.AddCurve(
+                new Point[] { new Point(15, 50), new Point(20, 40), new Point(50, 30) }
+            );
+            grPath.AddString(
+                "О сколько нам открытий...", new FontFamily("Comic Sans Ms"),
+                0, 32, new PointF(50, 50), new StringFormat()
+            );
+            grPath.AddPolygon(
+                new PointF[] {
+                    new PointF(300.0F, 100.0F), new PointF(350.0F, 200.0F),
+                    new PointF(200.0F, 200.0F), new PointF(130.0F, 230.0F)
+                }
+            );
+            var gr = e.Graphics;
+            var grBrush = new PathGradientBrush(grPath);
+            grBrush.CenterColor = Color.DarkRed;
+            grBrush.SurroundColors = new Color[] { Color.DarkViolet };
+            gr.FillPath(grBrush, grPath);
+            gr.DrawPath(new Pen(Color.Black, 1), grPath);
+        }
     }
 }            
