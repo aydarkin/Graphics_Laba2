@@ -382,5 +382,50 @@ namespace ILoveBasicLaba2
 
             e.Graphics.FillRegion(new SolidBrush(Color.Red), reg);
         }
+
+        private void tabPage19_Paint(object sender, PaintEventArgs e)
+        {
+            // Dim FirstPath As New GraphicsPath
+            // Dim SecondPath As New GraphicsPath
+
+            // ' Создаем эллипс и отображаем его на экране 
+            // ' с помощью черного цвета
+            // Dim regionRect As New Rectangle(20, 20, 100, 100)
+            // FirstPath.AddEllipse(regionRect)
+
+            // pe.Graphics.DrawPath(Pens.Black, FirstPath)
+
+
+            // ' Создаем второй эллипс, пересекающийся с первым, 
+            // 'и отображаем его на экране с помощью красного цвета
+            // Dim complementRect As New Rectangle(90, 30, 100, 100)
+            // SecondPath.AddEllipse(complementRect)
+
+            // pe.Graphics.DrawPath(Pens.Red, SecondPath)
+
+            // ' Создаем две области, используя соответственно 
+            // 'первый и второй пути
+            // Dim myRegion As New[Region](FirstPath)
+            //' Возвращаем дополнение первой области 
+            // 'при объединении со второй областью
+            // Dim complementRegion As New[Region](SecondPath)
+            //' Выполняем заливку области дополнения 
+            // 'синим цветом и изображаем ее на экране
+            // myRegion.Complement(SecondPath)
+            // ' Заливаем дополнение синим цветом
+            // Dim myBrush As New SolidBrush(Color.Blue)
+            // pe.Graphics.FillRegion(myBrush, myRegion)
+            var fPath = new GraphicsPath();
+            fPath.AddEllipse(new Rectangle(20, 20, 100, 100));
+            e.Graphics.DrawPath(Pens.Black, fPath);
+
+            var sPath = new GraphicsPath();
+            sPath.AddEllipse(new Rectangle(90, 30, 100, 100));
+            e.Graphics.DrawPath(Pens.Red, sPath);
+
+            var reg = new Region(fPath);
+            reg.Complement(sPath);
+            e.Graphics.FillRegion(new SolidBrush(Color.Blue), reg);
+        }
     }
 }            
