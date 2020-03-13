@@ -935,5 +935,23 @@ namespace ILoveBasicLaba2
         {
             correct_picture();
         }
+
+        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            //Dim Angle As Single
+            //Angle = MyHScrollBar.Value
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //G.Clear(Color.White)
+            //G.TranslateTransform(MyPictureBox.Width / 2, _
+            //MyPictureBox.Height / 2)
+            //G.RotateTransform(Angle)
+            //DrawShape(G)
+            var g = tabPage43.CreateGraphics();
+            g.Clear(Color.White);
+            g.TranslateTransform(300, 250);
+            g.RotateTransform(360 * hScrollBar2.Value / 100);
+            g.DrawImage(Resources.Car, new Point(0, 0));
+        }
     }
 }            
