@@ -885,5 +885,24 @@ namespace ILoveBasicLaba2
                 }
             tabPage37.BackgroundImage = bmp;
         }
+
+        private void tabPage39_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //G.Clear(Color.White)
+            //Dim myBitmap As New Bitmap("c:/Boy.jpg")
+            //Dim expansionRectangle As New Rectangle(135, 10, _
+            //myBitmap.Width, myBitmap.Height)
+            //Dim compressionRectangle As New Rectangle(400, 10, _
+            //myBitmap.Width / 2, myBitmap.Height / 2)
+            //G.DrawImage(myBitmap, 0, 0)
+            //G.DrawImage(myBitmap, expansionRectangle)
+            //G.DrawImage(myBitmap, compressionRectangle)
+            var img = Resources.Boy;
+            e.Graphics.DrawImage(img, 0, 0);
+            e.Graphics.DrawImage(img, new Rectangle(135, 10, img.Width, img.Height)); 
+            e.Graphics.DrawImage(img, new Rectangle(400, 10, img.Width / 2, img.Height / 2));
+        }
     }
 }            

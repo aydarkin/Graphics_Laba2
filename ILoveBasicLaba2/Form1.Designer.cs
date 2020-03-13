@@ -66,7 +66,6 @@
             this.tabPage32 = new System.Windows.Forms.TabPage();
             this.tabPage34 = new System.Windows.Forms.TabPage();
             this.tabPage36 = new System.Windows.Forms.TabPage();
-            this.tabPage37 = new System.Windows.Forms.TabPage();
             this.tabPage38 = new System.Windows.Forms.TabPage();
             this.tabPage39 = new System.Windows.Forms.TabPage();
             this.tabPage40 = new System.Windows.Forms.TabPage();
@@ -81,17 +80,18 @@
             this.tabPage49 = new System.Windows.Forms.TabPage();
             this.tabPage50 = new System.Windows.Forms.TabPage();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabPage33 = new System.Windows.Forms.TabPage();
             this.tabPage35 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
+            this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage27.SuspendLayout();
-            this.tabPage37.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage35.SuspendLayout();
+            this.tabPage37.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -549,18 +549,6 @@
             this.tabPage36.Text = "Пример 36";
             this.tabPage36.UseVisualStyleBackColor = true;
             // 
-            // tabPage37
-            // 
-            this.tabPage37.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.SkyScraper;
-            this.tabPage37.Controls.Add(this.button5);
-            this.tabPage37.Location = new System.Drawing.Point(4, 26);
-            this.tabPage37.Name = "tabPage37";
-            this.tabPage37.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage37.Size = new System.Drawing.Size(859, 539);
-            this.tabPage37.TabIndex = 9;
-            this.tabPage37.Text = "Пример 37";
-            this.tabPage37.UseVisualStyleBackColor = true;
-            // 
             // tabPage38
             // 
             this.tabPage38.Location = new System.Drawing.Point(4, 26);
@@ -580,6 +568,7 @@
             this.tabPage39.TabIndex = 9;
             this.tabPage39.Text = "Пример 39";
             this.tabPage39.UseVisualStyleBackColor = true;
+            this.tabPage39.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage39_Paint);
             // 
             // tabPage40
             // 
@@ -715,17 +704,6 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(3, 497);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(234, 39);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Эффект рельефа";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // tabPage33
             // 
             this.tabPage33.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.OlympicPark;
@@ -761,6 +739,29 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // tabPage37
+            // 
+            this.tabPage37.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.SkyScraper;
+            this.tabPage37.Controls.Add(this.button5);
+            this.tabPage37.Location = new System.Drawing.Point(4, 26);
+            this.tabPage37.Name = "tabPage37";
+            this.tabPage37.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage37.Size = new System.Drawing.Size(859, 539);
+            this.tabPage37.TabIndex = 9;
+            this.tabPage37.Text = "Пример 37";
+            this.tabPage37.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.Location = new System.Drawing.Point(3, 497);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(234, 39);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Эффект рельефа";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -776,9 +777,9 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage27.ResumeLayout(false);
-            this.tabPage37.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage35.ResumeLayout(false);
+            this.tabPage37.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
