@@ -834,5 +834,56 @@ namespace ILoveBasicLaba2
                 }
             tabPage35.BackgroundImage = bmp;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //MyPictureBox.Image = Image.FromFile("c:/skyscraper.jpg")
+
+            //Dim bmap As New Bitmap(MyPictureBox.Image)
+            //MyPictureBox.Image = bmap
+            //Dim tempbmp As New Bitmap(MyPictureBox.Image)
+            //Dim DispX As Integer = 1
+            //Dim DispY As Integer = 1
+            //Dim red, green, blue As Integer
+            //Dim i, j As Integer
+            //With tempbmp
+            //    For i = 0 To.Height - 2
+            //        For j = 0 To.Width - 2
+            //            Dim Pixel1, Pixel2 As System.Drawing.Color
+            //            Pixel1 = .GetPixel(j, i)
+            //            Pixel2 = .GetPixel(j + DispX, i + DispY)
+            //            red = Math.Min(Math.Abs(CInt(Pixel1.R) - _
+            //            CInt(Pixel2.R)) + 128, 255)
+            //            green = Math.Min(Math.Abs(CInt(Pixel1.G) - _
+            //            CInt(Pixel2.G)) + 128, 255)
+            //            blue = Math.Min(Math.Abs(CInt(Pixel1.B) - _
+            //            CInt(Pixel2.B)) + 128, 255)
+            //            bmap.SetPixel(j, i, Color.FromArgb(red, green, blue))
+
+            //            If i Mod 10 = 0 Then
+            //                MyPictureBox.Invalidate()
+            //                MyPictureBox.Refresh()
+            //                Me.Text = Int(100 * i / _
+            //                 (MyPictureBox.Image.Height - 2)).ToString & "%"
+            //            End If
+
+            //        Next j
+            //    Next i
+            //End With
+            //MyPictureBox.Refresh()
+            //Me.Text = "Создание эффекта рельефа изображения выполнено!"            
+
+            var bmp = new Bitmap(tabPage37.BackgroundImage);
+            int dispx = 1, dispy = 1;
+            for (int i = 0; i < bmp.Width - dispx; i++)
+                for (int j = 0; j < bmp.Height - dispy; j++)
+                {
+                    int r = Math.Abs(bmp.GetPixel(i, j).R - bmp.GetPixel(i + dispx, j + dispy).R) + 128;
+                    int g = Math.Abs(bmp.GetPixel(i, j).G - bmp.GetPixel(i + dispx, j + dispy).G) + 128;
+                    int b = Math.Abs(bmp.GetPixel(i, j).B - bmp.GetPixel(i + dispx, j + dispy).B) + 128;
+                    bmp.SetPixel(i, j, Color.FromArgb(Math.Min(r, 255), Math.Min(g, 255), Math.Min(b, 255)));
+                }
+            tabPage37.BackgroundImage = bmp;
+        }
     }
 }            
