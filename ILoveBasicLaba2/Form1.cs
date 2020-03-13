@@ -972,7 +972,7 @@ namespace ILoveBasicLaba2
             //G.DrawEllipse(MyPen, 100, 100, 300, 200)
             var g = tabPage45.CreateGraphics();
             g.Clear(Color.White);
-            g.ScaleTransform((hScrollBar3.Value) / 100, (vScrollBar1.Value) / 100);
+            g.ScaleTransform(hScrollBar3.Value / 100.0f, vScrollBar1.Value / 100.0f);
             g.DrawEllipse(new Pen(Color.Green, 2), 100, 100, 300, 200);
         }
 

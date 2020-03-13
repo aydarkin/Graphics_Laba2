@@ -815,19 +815,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hScrollBar3.LargeChange = 1;
             this.hScrollBar3.Location = new System.Drawing.Point(2, 519);
+            this.hScrollBar3.Minimum = 1;
             this.hScrollBar3.Name = "hScrollBar3";
             this.hScrollBar3.Size = new System.Drawing.Size(732, 17);
             this.hScrollBar3.TabIndex = 1;
+            this.hScrollBar3.Value = 1;
             this.hScrollBar3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar3_Scroll);
             // 
             // vScrollBar1
             // 
             this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.vScrollBar1.LargeChange = 1;
             this.vScrollBar1.Location = new System.Drawing.Point(838, 3);
+            this.vScrollBar1.Minimum = 1;
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 509);
             this.vScrollBar1.TabIndex = 3;
+            this.vScrollBar1.Value = 1;
             this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
             // 
             // Form1
