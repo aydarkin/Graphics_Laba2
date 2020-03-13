@@ -904,5 +904,36 @@ namespace ILoveBasicLaba2
             e.Graphics.DrawImage(img, new Rectangle(135, 10, img.Width, img.Height)); 
             e.Graphics.DrawImage(img, new Rectangle(400, 10, img.Width / 2, img.Height / 2));
         }
+
+        private void correct_picture()
+        {
+            //Dim XOffset, YOffset As Integer
+            //XOffset = MyHScrollBar.Value
+            //YOffset = MyVScrollBar.Value
+
+            //Dim img As Image
+            //img = Image.FromFile("c:/Sport.jpg")
+            //Dim Point1 As New Point(XOffset, YOffset)
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //G.Clear(Color.White)
+            //G.DrawImage(img, Point1)
+            var g = tabPage41.CreateGraphics();
+            g.Clear(Color.White);
+            var img = Resources.Sport;
+            int x = hScrollBar1.Value * (tabPage41.Width - img.Width) / 100;
+            int y = vScrollBar2.Value * (tabPage41.Height - img.Height) / 100;
+            g.DrawImage(img, new Point(x, y));
+        }
+
+        private void vScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            correct_picture();
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            correct_picture();
+        }
     }
 }            
