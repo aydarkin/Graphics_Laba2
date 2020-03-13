@@ -88,12 +88,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
+            this.hScrollBar3 = new System.Windows.Forms.HScrollBar();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage27.SuspendLayout();
             this.tabPage41.SuspendLayout();
             this.tabPage43.SuspendLayout();
+            this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage35.SuspendLayout();
             this.tabPage37.SuspendLayout();
@@ -596,6 +599,7 @@
             this.tabPage41.TabIndex = 9;
             this.tabPage41.Text = "Пример 41";
             this.tabPage41.UseVisualStyleBackColor = true;
+            this.tabPage41.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage41_Paint);
             // 
             // vScrollBar2
             // 
@@ -637,6 +641,7 @@
             this.tabPage43.TabIndex = 9;
             this.tabPage43.Text = "Пример 43";
             this.tabPage43.UseVisualStyleBackColor = true;
+            this.tabPage43.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage43_Paint);
             // 
             // tabPage44
             // 
@@ -650,6 +655,8 @@
             // 
             // tabPage45
             // 
+            this.tabPage45.Controls.Add(this.vScrollBar1);
+            this.tabPage45.Controls.Add(this.hScrollBar3);
             this.tabPage45.Location = new System.Drawing.Point(4, 26);
             this.tabPage45.Name = "tabPage45";
             this.tabPage45.Padding = new System.Windows.Forms.Padding(3);
@@ -657,6 +664,7 @@
             this.tabPage45.TabIndex = 9;
             this.tabPage45.Text = "Пример 45";
             this.tabPage45.UseVisualStyleBackColor = true;
+            this.tabPage45.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage45_Paint);
             // 
             // tabPage46
             // 
@@ -801,6 +809,27 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // hScrollBar3
+            // 
+            this.hScrollBar3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hScrollBar3.LargeChange = 1;
+            this.hScrollBar3.Location = new System.Drawing.Point(2, 519);
+            this.hScrollBar3.Name = "hScrollBar3";
+            this.hScrollBar3.Size = new System.Drawing.Size(732, 17);
+            this.hScrollBar3.TabIndex = 1;
+            this.hScrollBar3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar3_Scroll);
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.vScrollBar1.Location = new System.Drawing.Point(838, 3);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 509);
+            this.vScrollBar1.TabIndex = 3;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -818,6 +847,7 @@
             this.tabPage27.ResumeLayout(false);
             this.tabPage41.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
+            this.tabPage45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage35.ResumeLayout(false);
             this.tabPage37.ResumeLayout(false);
@@ -887,6 +917,8 @@
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.HScrollBar hScrollBar2;
+        private System.Windows.Forms.HScrollBar hScrollBar3;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }
 

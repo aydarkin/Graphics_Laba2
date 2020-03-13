@@ -936,7 +936,7 @@ namespace ILoveBasicLaba2
             correct_picture();
         }
 
-        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        private void correct_picture_1()
         {
             //Dim Angle As Single
             //Angle = MyHScrollBar.Value
@@ -952,6 +952,53 @@ namespace ILoveBasicLaba2
             g.TranslateTransform(300, 250);
             g.RotateTransform(360 * hScrollBar2.Value / 100);
             g.DrawImage(Resources.Car, new Point(0, 0));
+        }
+
+        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            correct_picture_1();
+        }
+
+        private void correct_ellipce()
+        {
+            //Dim XScaleFactor, YScaleFactor As Double
+            //XScaleFactor = (MyHScrollBar.Value) / 100
+            //YScaleFactor = (MyVScrollBar.Value) / 100
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //Dim MyPen As New Pen(Color.Green, 2)
+            //G.ScaleTransform(XScaleFactor, YScaleFactor)
+            //G.Clear(Color.White)
+            //G.DrawEllipse(MyPen, 100, 100, 300, 200)
+            var g = tabPage45.CreateGraphics();
+            g.Clear(Color.White);
+            g.ScaleTransform((hScrollBar3.Value) / 100, (vScrollBar1.Value) / 100);
+            g.DrawEllipse(new Pen(Color.Green, 2), 100, 100, 300, 200);
+        }
+
+        private void hScrollBar3_Scroll(object sender, ScrollEventArgs e)
+        {
+            correct_ellipce();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            correct_ellipce();
+        }
+
+        private void tabPage45_Paint(object sender, PaintEventArgs e)
+        {
+            correct_ellipce();
+        }
+
+        private void tabPage41_Paint(object sender, PaintEventArgs e)
+        {
+            correct_picture();
+        }
+
+        private void tabPage43_Paint(object sender, PaintEventArgs e)
+        {
+            correct_picture_1();
         }
     }
 }            
