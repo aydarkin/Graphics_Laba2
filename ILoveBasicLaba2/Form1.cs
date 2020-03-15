@@ -1470,5 +1470,30 @@ namespace ILoveBasicLaba2
             e.Graphics.DrawImage(myBitmap, destRectangle2, sourceRectangle, GraphicsUnit.Pixel);
 
         }
+
+        private void hScrollBar42_Scroll(object sender, ScrollEventArgs e)
+        {
+            //Dim XOffset, YOffset As Integer
+            //XOffset = MyHScrollBar.Value
+            //YOffset = MyVScrollBar.Value
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //Dim MyBox As New Rectangle(XOffset, YOffset, 100, 100)
+            //Dim MyPen As New Pen(Color.Red, 2)
+            //G.Clear(Color.White)
+            //G.DrawRectangle(MyPen, MyBox)
+
+            int XOffset;
+            int YOffset;
+            XOffset = hScrollBar42.Value;
+            YOffset = vScrollBar42.Value;
+
+            Graphics G = tabPage42.CreateGraphics();
+            var MyBox = new Rectangle(XOffset, YOffset, 100, 100);
+            var MyPen = new Pen(Color.Red, 2);
+            G.Clear(Color.White);
+            G.DrawRectangle(MyPen, MyBox);
+
+        }
     }
 }            

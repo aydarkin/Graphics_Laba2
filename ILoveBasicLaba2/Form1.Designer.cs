@@ -96,6 +96,8 @@
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
+            this.hScrollBar42 = new System.Windows.Forms.HScrollBar();
+            this.vScrollBar42 = new System.Windows.Forms.VScrollBar();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -105,6 +107,7 @@
             this.tabPage34.SuspendLayout();
             this.tabPage36.SuspendLayout();
             this.tabPage41.SuspendLayout();
+            this.tabPage42.SuspendLayout();
             this.tabPage43.SuspendLayout();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -658,6 +661,8 @@
             // 
             // tabPage42
             // 
+            this.tabPage42.Controls.Add(this.vScrollBar42);
+            this.tabPage42.Controls.Add(this.hScrollBar42);
             this.tabPage42.Location = new System.Drawing.Point(4, 26);
             this.tabPage42.Name = "tabPage42";
             this.tabPage42.Padding = new System.Windows.Forms.Padding(3);
@@ -925,6 +930,26 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // hScrollBar42
+            // 
+            this.hScrollBar42.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.hScrollBar42.Location = new System.Drawing.Point(3, 519);
+            this.hScrollBar42.Maximum = 1000;
+            this.hScrollBar42.Name = "hScrollBar42";
+            this.hScrollBar42.Size = new System.Drawing.Size(853, 17);
+            this.hScrollBar42.TabIndex = 0;
+            this.hScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
+            // 
+            // vScrollBar42
+            // 
+            this.vScrollBar42.Dock = System.Windows.Forms.DockStyle.Right;
+            this.vScrollBar42.Location = new System.Drawing.Point(839, 3);
+            this.vScrollBar42.Maximum = 1000;
+            this.vScrollBar42.Name = "vScrollBar42";
+            this.vScrollBar42.Size = new System.Drawing.Size(17, 516);
+            this.vScrollBar42.TabIndex = 1;
+            this.vScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -945,6 +970,7 @@
             this.tabPage34.ResumeLayout(false);
             this.tabPage36.ResumeLayout(false);
             this.tabPage41.ResumeLayout(false);
+            this.tabPage42.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -1028,6 +1054,8 @@
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.VScrollBar vScrollBar42;
+        private System.Windows.Forms.HScrollBar hScrollBar42;
     }
 }
 
