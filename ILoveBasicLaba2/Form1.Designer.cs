@@ -85,15 +85,17 @@
             this.tabPage49 = new System.Windows.Forms.TabPage();
             this.tabPage50 = new System.Windows.Forms.TabPage();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.tabPage35 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.button34 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -101,15 +103,17 @@
             this.tabPage27.SuspendLayout();
             this.tabPage28.SuspendLayout();
             this.tabPage34.SuspendLayout();
+            this.tabPage36.SuspendLayout();
             this.tabPage41.SuspendLayout();
             this.tabPage43.SuspendLayout();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            this.tabPage35.SuspendLayout();
-            this.tabPage37.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            this.tabPage35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            this.tabPage37.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -576,6 +580,8 @@
             // 
             // tabPage36
             // 
+            this.tabPage36.Controls.Add(this.pictureBox36);
+            this.tabPage36.Controls.Add(this.button36);
             this.tabPage36.Location = new System.Drawing.Point(4, 26);
             this.tabPage36.Name = "tabPage36";
             this.tabPage36.Padding = new System.Windows.Forms.Padding(3);
@@ -804,6 +810,27 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // button34
+            // 
+            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button34.Location = new System.Drawing.Point(8, 499);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(139, 32);
+            this.button34.TabIndex = 1;
+            this.button34.Text = "Инверсия цвета";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // button36
+            // 
+            this.button36.Location = new System.Drawing.Point(8, 493);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(170, 38);
+            this.button36.TabIndex = 0;
+            this.button36.Text = "Повысить резкость";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
             // pictureBox26
             // 
             this.pictureBox26.Location = new System.Drawing.Point(8, 6);
@@ -832,6 +859,15 @@
             this.tabPage33.UseVisualStyleBackColor = true;
             this.tabPage33.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage33_Paint);
             // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::ILoveBasicLaba2.Properties.Resources.cnn;
+            this.pictureBox34.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(399, 357);
+            this.pictureBox34.TabIndex = 0;
+            this.pictureBox34.TabStop = false;
+            // 
             // tabPage35
             // 
             this.tabPage35.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.Building;
@@ -854,6 +890,15 @@
             this.button4.Text = "Размыть изображение";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::ILoveBasicLaba2.Properties.Resources.Church;
+            this.pictureBox36.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(428, 407);
+            this.pictureBox36.TabIndex = 1;
+            this.pictureBox36.TabStop = false;
             // 
             // tabPage37
             // 
@@ -878,26 +923,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Image = global::ILoveBasicLaba2.Properties.Resources.cnn;
-            this.pictureBox34.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(399, 357);
-            this.pictureBox34.TabIndex = 0;
-            this.pictureBox34.TabStop = false;
-            // 
-            // button34
-            // 
-            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button34.Location = new System.Drawing.Point(8, 499);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(139, 32);
-            this.button34.TabIndex = 1;
-            this.button34.Text = "Инверсия цвета";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -916,15 +941,17 @@
             this.tabPage27.ResumeLayout(false);
             this.tabPage28.ResumeLayout(false);
             this.tabPage34.ResumeLayout(false);
+            this.tabPage36.ResumeLayout(false);
             this.tabPage41.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            this.tabPage35.ResumeLayout(false);
-            this.tabPage37.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            this.tabPage35.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            this.tabPage37.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -997,6 +1024,8 @@
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.PictureBox pictureBox36;
+        private System.Windows.Forms.Button button36;
     }
 }
 
