@@ -990,7 +990,7 @@ namespace ILoveBasicLaba2
         {
             correct_ellipce();
         }
-
+        
         private void tabPage41_Paint(object sender, PaintEventArgs e)
         {
             correct_picture();
@@ -999,6 +999,32 @@ namespace ILoveBasicLaba2
         private void tabPage43_Paint(object sender, PaintEventArgs e)
         {
             correct_picture_1();
+        }
+
+        private void tabPage16_Paint(object sender, PaintEventArgs e)
+        {
+            //'Создаем путь
+            //Dim MyPath As New GraphicsPath
+            //Dim FirstRectangle As New Rectangle(0, 0, 100, 50)
+            //Dim SecondRectangle As New Rectangle(50, 50, 150, 100)
+            //'Добавляем к пути эллипс и прямоугольник
+            //MyPath.AddEllipse(FirstRectangle)
+            //MyPath.AddRectangle(SecondRectangle)
+            //'Добавляем путь к области
+            //Dim myRegion As New[Region](MyPath)
+            //Dim MyBrush As New SolidBrush(Color.DarkCyan)
+            //'Закрашиваем область
+            //pe.Graphics.FillRegion(MyBrush, myRegion)
+
+            var MyPath = new GraphicsPath();
+            var FirstRectangle = new Rectangle(0, 0, 100, 50);
+            var SecondRectangle = new Rectangle(50, 50, 150, 100);
+            MyPath.AddEllipse(FirstRectangle);
+            MyPath.AddRectangle(SecondRectangle);
+            var myRegion = new Region(MyPath);
+            var MyBrush = new SolidBrush(Color.DarkCyan);
+            e.Graphics.FillRegion(MyBrush, myRegion);
+
         }
     }
 }            
