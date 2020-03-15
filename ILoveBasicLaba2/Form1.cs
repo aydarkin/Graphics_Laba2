@@ -1147,5 +1147,76 @@ namespace ILoveBasicLaba2
             e.Graphics.FillRegion(myBrush, myRegion);
 
         }
+
+        private void tabPage24_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim graphics As Graphics = pe.Graphics
+            //Dim graphicsContainer As GraphicsContainer
+            //Dim redPen As New Pen(Color.Red, 2)
+            //Dim bluePen As New Pen(Color.Blue, 2)
+            //Dim redBrush As New SolidBrush(Color.Red)
+            //Dim greenBrush As New SolidBrush(Color.Green)
+
+
+            //Dim Mypoints As PointF() = {
+            //    New Point(0, 0), New Point(100, 10), _
+            //New Point(200, 200), New Point(100, 400)}
+
+            //Dim MyPath As New GraphicsPath
+            //MyPath.AddPolygon(Mypoints)
+
+            //graphics.SetClip(MyPath)
+
+            //graphics.FillRectangle(redBrush, 20, 20, 150, 150)
+
+            //graphicsContainer = graphics.BeginContainer()
+            //' Создаем путь, содержащий отдельный эллипс
+            //Dim path As New GraphicsPath
+            //path.AddEllipse(30, 30, 150, 100)
+
+            //' Создаем область, построенную на пути
+            //Dim[region] As New[Region](path)
+            //graphics.FillRegion(greenBrush, [region])
+
+            //graphics.SetClip([region], CombineMode.Replace)
+            //graphics.DrawLine(redPen, 50, 0, 350, 300)
+            //graphics.EndContainer(graphicsContainer)
+
+            //graphics.DrawLine(bluePen, 70, 0, 370, 300)
+
+            var graphics = e.Graphics;
+            GraphicsContainer graphicsContainer;
+
+            var redPen = new Pen(Color.Red, 2);
+            var bluePen = new Pen(Color.Blue, 2);
+            var redBrush = new SolidBrush(Color.Red);
+            var greenBrush = new SolidBrush(Color.Green);
+
+            PointF[] Mypoints = {
+                new Point(0, 0),
+                new Point(100, 10),
+                new Point(200, 200),
+                new Point(100, 400)
+            };
+
+            var MyPath = new GraphicsPath();
+            MyPath.AddPolygon(Mypoints);
+
+            graphics.SetClip(MyPath);
+            graphics.FillRectangle(redBrush, 20, 20, 150, 150);
+
+            graphicsContainer = graphics.BeginContainer();
+
+            var path = new GraphicsPath();
+            path.AddEllipse(30, 30, 150, 100);
+
+            var region = new Region(path);
+            graphics.FillRegion(greenBrush, region);
+            graphics.SetClip(region, CombineMode.Replace);
+            graphics.DrawLine(redPen, 50, 0, 350, 300);
+            graphics.EndContainer(graphicsContainer);
+            graphics.DrawLine(bluePen, 70, 0, 370, 300);
+
+        }
     }
 }            
