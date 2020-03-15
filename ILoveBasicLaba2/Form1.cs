@@ -1059,5 +1059,51 @@ namespace ILoveBasicLaba2
             
             e.Graphics.FillRegion(myBrush, myRegion);
         }
+
+        private void tabPage20_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim FirstPath As New GraphicsPath
+            //Dim SecondPath As New GraphicsPath
+
+            //' Создаем эллипс и отображаем его 
+            //'на экране с помощью черного цвета
+            //Dim regionRect As New Rectangle(20, 20, 100, 100)
+            //FirstPath.AddEllipse(regionRect)
+
+            //pe.Graphics.DrawPath(Pens.Black, FirstPath)
+            //' Создаем второй эллипс, пересекающийся с первым, 
+            //'и отображаем его на экране с помощью красного цвета
+            //Dim complementRect As New RectangleF(90, 30, 100, 100)
+            //SecondPath.AddEllipse(complementRect)
+
+
+            //pe.Graphics.DrawPath(Pens.Red, SecondPath)
+            //' Создаем область, используя первый эллипс
+            //Dim myRegion As New[Region](FirstPath)
+            //' Возвращаем неисключенную часть области 
+            //'при объединении со вторым эллипсом
+            //myRegion.Exclude(SecondPath)
+            //' Выполняем заливку неисключенной области 
+            //'синим цветом и изображает ее на экране
+            //Dim myBrush As New SolidBrush(Color.Blue)
+            //pe.Graphics.FillRegion(myBrush, myRegion)
+
+            var FirstPath = new GraphicsPath();
+            var SecondPath = new GraphicsPath();
+
+            var regionRect = new Rectangle(20, 20, 100, 100);
+            FirstPath.AddEllipse(regionRect);
+            e.Graphics.DrawPath(Pens.Black, FirstPath);
+
+            var complementRect = new RectangleF(90, 30, 100, 100);
+            SecondPath.AddEllipse(complementRect);
+            e.Graphics.DrawPath(Pens.Red, SecondPath);
+
+            var myRegion = new Region(FirstPath);
+            myRegion.Exclude(SecondPath);
+            var myBrush = new SolidBrush(Color.Blue);
+            e.Graphics.FillRegion(myBrush, myRegion);
+
+        }
     }
 }            
