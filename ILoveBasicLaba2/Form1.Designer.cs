@@ -57,15 +57,26 @@
             this.tabPage24 = new System.Windows.Forms.TabPage();
             this.tabPage25 = new System.Windows.Forms.TabPage();
             this.tabPage26 = new System.Windows.Forms.TabPage();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tabPage27 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage28 = new System.Windows.Forms.TabPage();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.tabPage29 = new System.Windows.Forms.TabPage();
             this.tabPage30 = new System.Windows.Forms.TabPage();
             this.tabPage31 = new System.Windows.Forms.TabPage();
             this.tabPage32 = new System.Windows.Forms.TabPage();
+            this.tabPage33 = new System.Windows.Forms.TabPage();
             this.tabPage34 = new System.Windows.Forms.TabPage();
+            this.button34 = new System.Windows.Forms.Button();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.tabPage35 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabPage36 = new System.Windows.Forms.TabPage();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.button36 = new System.Windows.Forms.Button();
+            this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabPage38 = new System.Windows.Forms.TabPage();
             this.tabPage39 = new System.Windows.Forms.TabPage();
             this.tabPage40 = new System.Windows.Forms.TabPage();
@@ -73,52 +84,40 @@
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.tabPage42 = new System.Windows.Forms.TabPage();
+            this.vScrollBar42 = new System.Windows.Forms.VScrollBar();
+            this.hScrollBar42 = new System.Windows.Forms.HScrollBar();
             this.tabPage43 = new System.Windows.Forms.TabPage();
             this.hScrollBar2 = new System.Windows.Forms.HScrollBar();
             this.tabPage44 = new System.Windows.Forms.TabPage();
+            this.hScrollBar44 = new System.Windows.Forms.HScrollBar();
             this.tabPage45 = new System.Windows.Forms.TabPage();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.hScrollBar3 = new System.Windows.Forms.HScrollBar();
             this.tabPage46 = new System.Windows.Forms.TabPage();
-            this.tabPage47 = new System.Windows.Forms.TabPage();
-            this.tabPage48 = new System.Windows.Forms.TabPage();
-            this.tabPage49 = new System.Windows.Forms.TabPage();
-            this.tabPage50 = new System.Windows.Forms.TabPage();
+            this.button46 = new System.Windows.Forms.Button();
+            this.hScrollBar46 = new System.Windows.Forms.HScrollBar();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.tabPage33 = new System.Windows.Forms.TabPage();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.tabPage35 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox36 = new System.Windows.Forms.PictureBox();
-            this.tabPage37 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.hScrollBar42 = new System.Windows.Forms.HScrollBar();
-            this.vScrollBar42 = new System.Windows.Forms.VScrollBar();
-            this.hScrollBar44 = new System.Windows.Forms.HScrollBar();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.tabPage27.SuspendLayout();
             this.tabPage28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             this.tabPage34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            this.tabPage35.SuspendLayout();
             this.tabPage36.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            this.tabPage37.SuspendLayout();
             this.tabPage41.SuspendLayout();
             this.tabPage42.SuspendLayout();
             this.tabPage43.SuspendLayout();
             this.tabPage44.SuspendLayout();
             this.tabPage45.SuspendLayout();
+            this.tabPage46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
-            this.tabPage35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
-            this.tabPage37.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -169,10 +168,6 @@
             this.tabControl1.Controls.Add(this.tabPage44);
             this.tabControl1.Controls.Add(this.tabPage45);
             this.tabControl1.Controls.Add(this.tabPage46);
-            this.tabControl1.Controls.Add(this.tabPage47);
-            this.tabControl1.Controls.Add(this.tabPage48);
-            this.tabControl1.Controls.Add(this.tabPage49);
-            this.tabControl1.Controls.Add(this.tabPage50);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -493,6 +488,14 @@
             this.tabPage26.UseVisualStyleBackColor = true;
             this.tabPage26.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage26_Paint);
             // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(308, 284);
+            this.pictureBox26.TabIndex = 0;
+            this.pictureBox26.TabStop = false;
+            // 
             // tabPage27
             // 
             this.tabPage27.Controls.Add(this.button3);
@@ -526,6 +529,14 @@
             this.tabPage28.Text = "Пример 28";
             this.tabPage28.UseVisualStyleBackColor = true;
             this.tabPage28.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage28_Paint);
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(409, 427);
+            this.pictureBox28.TabIndex = 0;
+            this.pictureBox28.TabStop = false;
             // 
             // tabPage29
             // 
@@ -571,6 +582,18 @@
             this.tabPage32.UseVisualStyleBackColor = true;
             this.tabPage32.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage32_Paint);
             // 
+            // tabPage33
+            // 
+            this.tabPage33.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.OlympicPark;
+            this.tabPage33.Location = new System.Drawing.Point(4, 26);
+            this.tabPage33.Name = "tabPage33";
+            this.tabPage33.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage33.Size = new System.Drawing.Size(859, 539);
+            this.tabPage33.TabIndex = 9;
+            this.tabPage33.Text = "Пример 33";
+            this.tabPage33.UseVisualStyleBackColor = true;
+            this.tabPage33.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage33_Paint);
+            // 
             // tabPage34
             // 
             this.tabPage34.Controls.Add(this.button34);
@@ -583,6 +606,49 @@
             this.tabPage34.Text = "Пример 34";
             this.tabPage34.UseVisualStyleBackColor = true;
             // 
+            // button34
+            // 
+            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button34.Location = new System.Drawing.Point(8, 499);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(139, 32);
+            this.button34.TabIndex = 1;
+            this.button34.Text = "Инверсия цвета";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::ILoveBasicLaba2.Properties.Resources.cnn;
+            this.pictureBox34.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(399, 357);
+            this.pictureBox34.TabIndex = 0;
+            this.pictureBox34.TabStop = false;
+            // 
+            // tabPage35
+            // 
+            this.tabPage35.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.Building;
+            this.tabPage35.Controls.Add(this.button4);
+            this.tabPage35.Location = new System.Drawing.Point(4, 26);
+            this.tabPage35.Name = "tabPage35";
+            this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage35.Size = new System.Drawing.Size(859, 539);
+            this.tabPage35.TabIndex = 9;
+            this.tabPage35.Text = "Пример 35";
+            this.tabPage35.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.Location = new System.Drawing.Point(0, 511);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(234, 39);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Размыть изображение";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // tabPage36
             // 
             this.tabPage36.Controls.Add(this.pictureBox36);
@@ -594,6 +660,48 @@
             this.tabPage36.TabIndex = 9;
             this.tabPage36.Text = "Пример 36";
             this.tabPage36.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::ILoveBasicLaba2.Properties.Resources.Church;
+            this.pictureBox36.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(428, 407);
+            this.pictureBox36.TabIndex = 1;
+            this.pictureBox36.TabStop = false;
+            // 
+            // button36
+            // 
+            this.button36.Location = new System.Drawing.Point(8, 493);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(170, 38);
+            this.button36.TabIndex = 0;
+            this.button36.Text = "Повысить резкость";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // tabPage37
+            // 
+            this.tabPage37.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.SkyScraper;
+            this.tabPage37.Controls.Add(this.button5);
+            this.tabPage37.Location = new System.Drawing.Point(4, 26);
+            this.tabPage37.Name = "tabPage37";
+            this.tabPage37.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage37.Size = new System.Drawing.Size(859, 539);
+            this.tabPage37.TabIndex = 9;
+            this.tabPage37.Text = "Пример 37";
+            this.tabPage37.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.Location = new System.Drawing.Point(3, 505);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(234, 39);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Эффект рельефа";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabPage38
             // 
@@ -673,6 +781,26 @@
             this.tabPage42.Text = "Пример 42";
             this.tabPage42.UseVisualStyleBackColor = true;
             // 
+            // vScrollBar42
+            // 
+            this.vScrollBar42.Dock = System.Windows.Forms.DockStyle.Right;
+            this.vScrollBar42.Location = new System.Drawing.Point(839, 3);
+            this.vScrollBar42.Maximum = 1000;
+            this.vScrollBar42.Name = "vScrollBar42";
+            this.vScrollBar42.Size = new System.Drawing.Size(17, 516);
+            this.vScrollBar42.TabIndex = 1;
+            this.vScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
+            // 
+            // hScrollBar42
+            // 
+            this.hScrollBar42.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.hScrollBar42.Location = new System.Drawing.Point(3, 519);
+            this.hScrollBar42.Maximum = 1000;
+            this.hScrollBar42.Name = "hScrollBar42";
+            this.hScrollBar42.Size = new System.Drawing.Size(853, 17);
+            this.hScrollBar42.TabIndex = 0;
+            this.hScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
+            // 
             // tabPage43
             // 
             this.tabPage43.Controls.Add(this.hScrollBar2);
@@ -706,6 +834,16 @@
             this.tabPage44.TabIndex = 9;
             this.tabPage44.Text = "Пример 44";
             this.tabPage44.UseVisualStyleBackColor = true;
+            // 
+            // hScrollBar44
+            // 
+            this.hScrollBar44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hScrollBar44.Location = new System.Drawing.Point(3, 515);
+            this.hScrollBar44.Name = "hScrollBar44";
+            this.hScrollBar44.Size = new System.Drawing.Size(729, 21);
+            this.hScrollBar44.TabIndex = 0;
+            this.hScrollBar44.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar44_Scroll);
             // 
             // tabPage45
             // 
@@ -748,6 +886,8 @@
             // 
             // tabPage46
             // 
+            this.tabPage46.Controls.Add(this.button46);
+            this.tabPage46.Controls.Add(this.hScrollBar46);
             this.tabPage46.Location = new System.Drawing.Point(4, 26);
             this.tabPage46.Name = "tabPage46";
             this.tabPage46.Padding = new System.Windows.Forms.Padding(3);
@@ -756,45 +896,26 @@
             this.tabPage46.Text = "Пример 46";
             this.tabPage46.UseVisualStyleBackColor = true;
             // 
-            // tabPage47
+            // button46
             // 
-            this.tabPage47.Location = new System.Drawing.Point(4, 26);
-            this.tabPage47.Name = "tabPage47";
-            this.tabPage47.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage47.Size = new System.Drawing.Size(859, 539);
-            this.tabPage47.TabIndex = 9;
-            this.tabPage47.Text = "Пример 47";
-            this.tabPage47.UseVisualStyleBackColor = true;
+            this.button46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button46.Location = new System.Drawing.Point(6, 480);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(134, 36);
+            this.button46.TabIndex = 1;
+            this.button46.Text = "Старт";
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
             // 
-            // tabPage48
+            // hScrollBar46
             // 
-            this.tabPage48.Location = new System.Drawing.Point(4, 26);
-            this.tabPage48.Name = "tabPage48";
-            this.tabPage48.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage48.Size = new System.Drawing.Size(859, 539);
-            this.tabPage48.TabIndex = 9;
-            this.tabPage48.Text = "Пример 48";
-            this.tabPage48.UseVisualStyleBackColor = true;
-            // 
-            // tabPage49
-            // 
-            this.tabPage49.Location = new System.Drawing.Point(4, 26);
-            this.tabPage49.Name = "tabPage49";
-            this.tabPage49.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage49.Size = new System.Drawing.Size(859, 539);
-            this.tabPage49.TabIndex = 9;
-            this.tabPage49.Text = "Пример 49";
-            this.tabPage49.UseVisualStyleBackColor = true;
-            // 
-            // tabPage50
-            // 
-            this.tabPage50.Location = new System.Drawing.Point(4, 26);
-            this.tabPage50.Name = "tabPage50";
-            this.tabPage50.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage50.Size = new System.Drawing.Size(859, 539);
-            this.tabPage50.TabIndex = 9;
-            this.tabPage50.Text = "Пример 50";
-            this.tabPage50.UseVisualStyleBackColor = true;
+            this.hScrollBar46.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.hScrollBar46.Location = new System.Drawing.Point(3, 519);
+            this.hScrollBar46.Maximum = 369;
+            this.hScrollBar46.Name = "hScrollBar46";
+            this.hScrollBar46.Size = new System.Drawing.Size(853, 17);
+            this.hScrollBar46.TabIndex = 0;
+            this.hScrollBar46.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar46_Scroll);
             // 
             // numericUpDown1
             // 
@@ -820,149 +941,6 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // button34
-            // 
-            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button34.Location = new System.Drawing.Point(8, 499);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(139, 32);
-            this.button34.TabIndex = 1;
-            this.button34.Text = "Инверсия цвета";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // button36
-            // 
-            this.button36.Location = new System.Drawing.Point(8, 493);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(170, 38);
-            this.button36.TabIndex = 0;
-            this.button36.Text = "Повысить резкость";
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.button36_Click);
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(308, 284);
-            this.pictureBox26.TabIndex = 0;
-            this.pictureBox26.TabStop = false;
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(409, 427);
-            this.pictureBox28.TabIndex = 0;
-            this.pictureBox28.TabStop = false;
-            // 
-            // tabPage33
-            // 
-            this.tabPage33.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.OlympicPark;
-            this.tabPage33.Location = new System.Drawing.Point(4, 22);
-            this.tabPage33.Name = "tabPage33";
-            this.tabPage33.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage33.Size = new System.Drawing.Size(859, 543);
-            this.tabPage33.TabIndex = 9;
-            this.tabPage33.Text = "Пример 33";
-            this.tabPage33.UseVisualStyleBackColor = true;
-            this.tabPage33.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage33_Paint);
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Image = global::ILoveBasicLaba2.Properties.Resources.cnn;
-            this.pictureBox34.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(399, 357);
-            this.pictureBox34.TabIndex = 0;
-            this.pictureBox34.TabStop = false;
-            // 
-            // tabPage35
-            // 
-            this.tabPage35.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.Building;
-            this.tabPage35.Controls.Add(this.button4);
-            this.tabPage35.Location = new System.Drawing.Point(4, 22);
-            this.tabPage35.Name = "tabPage35";
-            this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage35.Size = new System.Drawing.Size(859, 543);
-            this.tabPage35.TabIndex = 9;
-            this.tabPage35.Text = "Пример 35";
-            this.tabPage35.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(0, 511);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(234, 39);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Размыть изображение";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // pictureBox36
-            // 
-            this.pictureBox36.Image = global::ILoveBasicLaba2.Properties.Resources.Church;
-            this.pictureBox36.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(428, 407);
-            this.pictureBox36.TabIndex = 1;
-            this.pictureBox36.TabStop = false;
-            // 
-            // tabPage37
-            // 
-            this.tabPage37.BackgroundImage = global::ILoveBasicLaba2.Properties.Resources.SkyScraper;
-            this.tabPage37.Controls.Add(this.button5);
-            this.tabPage37.Location = new System.Drawing.Point(4, 22);
-            this.tabPage37.Name = "tabPage37";
-            this.tabPage37.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage37.Size = new System.Drawing.Size(859, 543);
-            this.tabPage37.TabIndex = 9;
-            this.tabPage37.Text = "Пример 37";
-            this.tabPage37.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(3, 505);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(234, 39);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Эффект рельефа";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // hScrollBar42
-            // 
-            this.hScrollBar42.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hScrollBar42.Location = new System.Drawing.Point(3, 519);
-            this.hScrollBar42.Maximum = 1000;
-            this.hScrollBar42.Name = "hScrollBar42";
-            this.hScrollBar42.Size = new System.Drawing.Size(853, 17);
-            this.hScrollBar42.TabIndex = 0;
-            this.hScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
-            // 
-            // vScrollBar42
-            // 
-            this.vScrollBar42.Dock = System.Windows.Forms.DockStyle.Right;
-            this.vScrollBar42.Location = new System.Drawing.Point(839, 3);
-            this.vScrollBar42.Maximum = 1000;
-            this.vScrollBar42.Name = "vScrollBar42";
-            this.vScrollBar42.Size = new System.Drawing.Size(17, 516);
-            this.vScrollBar42.TabIndex = 1;
-            this.vScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
-            // 
-            // hScrollBar44
-            // 
-            this.hScrollBar44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hScrollBar44.Location = new System.Drawing.Point(3, 515);
-            this.hScrollBar44.Name = "hScrollBar44";
-            this.hScrollBar44.Size = new System.Drawing.Size(729, 21);
-            this.hScrollBar44.TabIndex = 0;
-            this.hScrollBar44.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar44_Scroll);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -978,22 +956,23 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.tabPage27.ResumeLayout(false);
             this.tabPage28.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             this.tabPage34.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            this.tabPage35.ResumeLayout(false);
             this.tabPage36.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            this.tabPage37.ResumeLayout(false);
             this.tabPage41.ResumeLayout(false);
             this.tabPage42.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
             this.tabPage44.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
+            this.tabPage46.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
-            this.tabPage35.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
-            this.tabPage37.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1047,10 +1026,6 @@
         private System.Windows.Forms.TabPage tabPage44;
         private System.Windows.Forms.TabPage tabPage45;
         private System.Windows.Forms.TabPage tabPage46;
-        private System.Windows.Forms.TabPage tabPage47;
-        private System.Windows.Forms.TabPage tabPage48;
-        private System.Windows.Forms.TabPage tabPage49;
-        private System.Windows.Forms.TabPage tabPage50;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -1071,6 +1046,8 @@
         private System.Windows.Forms.VScrollBar vScrollBar42;
         private System.Windows.Forms.HScrollBar hScrollBar42;
         private System.Windows.Forms.HScrollBar hScrollBar44;
+        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.HScrollBar hScrollBar46;
     }
 }
 

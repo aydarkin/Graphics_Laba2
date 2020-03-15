@@ -1,5 +1,6 @@
 ﻿using ILoveBasicLaba2.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -1555,6 +1556,236 @@ namespace ILoveBasicLaba2
             var Point2 = new Point((hScrollBar44.Width / 2) + 50, (hScrollBar44.Height / 2) + 50);
 
             G.DrawLine(MyPen, Point1, Point2);
+        }
+
+        //начало 46
+        public class Beta
+        {
+            public double x;
+            public double y;
+            public Beta(double x, double y)
+            {
+                this.x = x;
+                this.y = y;
+            }
+        }
+
+        void DrawShape(Graphics GraphicObject)
+        {
+            //Dim XPixels, YPixels As Single
+            //XPixels = MyPictureBox.Width - 10
+            //YPixels = MyPictureBox.Height - 10
+            //Dim IterationCount As Integer
+            //IterationCount = 1000
+            //Dim XInitial, XFinal As Double
+            //XInitial = -2 * Math.PI
+            //XFinal = 2 * Math.PI
+            //Dim Delta As Double
+            //Delta = (XFinal - XInitial) / IterationCount
+            //Dim i As Double
+            //Dim MyList As New ArrayList
+            //Dim FunctionList As New ArrayList
+            //For i = XInitial To XFinal Step Delta
+            //    MyList.Add(New Beta(i, Alpha(i)))
+            //    FunctionList.Add(Alpha(i))
+            //Next
+            //FunctionList.Sort()
+            //Dim YMin, Ymax As Double
+            //YMin = FunctionList(0)
+            //Ymax = FunctionList(FunctionList.Count - 1)
+            //Dim MyPen As Pen = New Pen(Color.Black, 1)
+            //Dim graphPath As New GraphicsPath
+            //Dim blackPen As New Pen(Color.Black, 1)
+            //Dim x(IterationCount), y(IterationCount) As Double
+            //x(0) = XInitial
+            //y(0) = Alpha(XInitial)
+            //Dim XScale, YScale As Single
+            //XScale = (XPixels / 2) / (XFinal - XInitial)
+            //YScale = (YPixels / 2) / (Ymax - YMin)
+            //Dim j As Integer
+            //For j = 1 To IterationCount -1
+            //    graphPath.AddLine(CInt(XScale * MyList(j - 1).x), _
+            //    CInt(YScale * MyList(j - 1).y), _
+            //    CInt(XScale * MyList(j).x), CInt(YScale * MyList(j).y))
+            //Next
+            //GraphicObject.DrawPath(blackPen, graphPath)
+
+
+            float XPixels, YPixels;
+
+            XPixels = tabPage46.Width - 10;
+            YPixels = tabPage46.Height - 10;
+
+            int IterationCount = 1000;
+
+            double XInitial = -2 * Math.PI;
+            double XFinal = 2 * Math.PI;
+            double Delta = (XFinal - XInitial) / IterationCount;
+
+            double i;
+
+            List<Beta> MyList = new List<Beta>();
+            List<double> FunctionList = new List<double>();
+
+            for (i = XInitial; i <= XFinal; i += Delta)
+            {
+                MyList.Add(new Beta(i, Math.Sin(i)));
+                FunctionList.Add(Math.Sin(i));
+            }
+            FunctionList.Sort();
+
+            double YMin = FunctionList[0];
+            double Ymax = FunctionList[FunctionList.Count - 1];
+
+            var graphPath = new GraphicsPath();
+            var blackPen = new Pen(Color.Black, 1);
+
+            double[] x = new double[IterationCount];
+            double[] y = new double[IterationCount];
+            x[0] = XInitial;
+            y[0] = Math.Sin(XInitial);
+
+            double XScale = XPixels / (XFinal - XInitial);
+            double YScale = YPixels / (Ymax - YMin);
+
+            for (int j = 1; j <= IterationCount - 1; j++)
+            {
+                graphPath.AddLine((int)(XScale * MyList[j - 1].x), (int)(YScale * MyList[j - 1].y), (int)(XScale * MyList[j].x), (int)(YScale * MyList[j].y));
+            }
+            GraphicObject.DrawPath(blackPen, graphPath);
+        }
+
+        private void hScrollBar46_Scroll(object sender, ScrollEventArgs e)
+        {
+            //G.Clear(Color.White)
+            //Dim Value As Integer
+            //Value = MyHScrollBar.Value
+            //Dim x, y As Single
+            //x = MyPictureBox.Width / 2 + 300
+            //y = MyPictureBox.Height / 2 + 300
+            //Dim rotatePoint As New PointF(x, y)
+            //G.ResetTransform()
+            //Dim myMatrix As New System.Drawing.Drawing2D.Matrix
+            //myMatrix.Rotate(Value)
+            //myMatrix.Scale(0.3, 0.3)
+            //myMatrix.Translate(x, y)
+            //G.Transform = myMatrix
+            //DrawShape(G)
+
+            var G = tabPage46.CreateGraphics();
+            G.Clear(Color.White);
+
+            int Value = hScrollBar46.Value;
+
+            float x = tabPage46.Width / 2 + 300;
+            float y = tabPage46.Height / 2 + 300;
+
+            //PointF rotatePoint = new PointF(x, y);
+
+            G.ResetTransform();
+
+            Matrix myMatrix = new Matrix();
+            myMatrix.Rotate(Value);
+
+            myMatrix.Scale(0.3f, 0.3f);
+            myMatrix.Translate(x, y);
+            G.Transform = myMatrix;
+            DrawShape(G);
+
+        }
+
+        private void button46_Click(object sender, EventArgs e)
+        {
+            //Dim XPixels, YPixels As Single
+            //XPixels = MyPictureBox.Width - 10
+            //YPixels = MyPictureBox.Height - 10
+            //Dim IterationCount As Integer
+            //IterationCount = 1000
+            //Dim XInitial, XFinal As Double
+            //XInitial = -2 * Math.PI
+            //XFinal = 2 * Math.PI
+            //Dim Delta As Double
+            //Delta = (XFinal - XInitial) / IterationCount
+            //Dim i As Double
+            //Dim MyList As New ArrayList
+            //Dim FunctionList As New ArrayList
+            //For i = XInitial To XFinal Step Delta
+            //    MyList.Add(New Beta(i, Alpha(i)))
+            //    FunctionList.Add(Alpha(i))
+            //Next
+            //FunctionList.Sort()
+            //Dim YMin, Ymax As Double
+            //YMin = FunctionList(0)
+            //Ymax = FunctionList(FunctionList.Count - 1)
+            //Dim MyPen As Pen = New Pen(Color.Black, 1)
+            //Dim graphPath As New GraphicsPath
+            //Dim blackPen As New Pen(Color.Black, 1)
+            //Dim x(IterationCount), y(IterationCount) As Double
+            //x(0) = XInitial
+            //y(0) = Alpha(XInitial)
+            //Dim XScale, YScale As Single
+            //XScale = XPixels / (XFinal - XInitial)
+            //YScale = YPixels / (Ymax - YMin)
+            //Dim j As Integer
+            //For j = 1 To IterationCount -1
+            //    graphPath.AddLine(CInt(XScale * MyList(j - 1).x), _
+            //    CInt(YScale * MyList(j - 1).y), _
+            //    CInt(XScale * MyList(j).x), CInt(YScale * MyList(j).y))
+            //Next
+            //G.ResetTransform()
+            //Dim myMatrix As New Matrix
+            //myMatrix.Translate(XPixels / 2, YPixels / 2)
+            //G.Transform = myMatrix
+            //G.DrawPath(blackPen, graphPath)
+
+            var G = tabPage46.CreateGraphics();
+
+            float XPixels = tabPage46.Width - 10;
+            float YPixels = tabPage46.Height - 10;
+
+            int IterationCount = 1000;
+
+            double XInitial = -2 * Math.PI;
+            double XFinal = 2 * Math.PI;
+
+            double Delta = (XFinal - XInitial) / IterationCount;
+            double i;
+
+            List<Beta> MyList = new List<Beta>();
+            List<double> FunctionList = new List<double>();
+            for (i = XInitial; i <= XFinal; i += Delta)
+            {
+                MyList.Add(new Beta(i, Math.Sin(i)));
+                FunctionList.Add(Math.Sin(i));
+            }
+            FunctionList.Sort();
+
+            double YMin = FunctionList[0];
+            double Ymax = FunctionList[FunctionList.Count - 1];
+
+            GraphicsPath graphPath = new GraphicsPath();
+            Pen blackPen = new Pen(Color.Black, 1);
+
+            double[] x = new double[IterationCount];
+            double[] y = new double[IterationCount];
+            x[0] = XInitial;
+            y[0] = Math.Sin(XInitial);
+
+            double XScale = XPixels / (XFinal - XInitial);
+            double YScale = YPixels / (Ymax - YMin);
+
+            for (int j = 1; j <= IterationCount - 1; j++)
+            {
+                graphPath.AddLine((int)(XScale * MyList[j - 1].x), (int)(YScale * MyList[j - 1].y), (int)(XScale * MyList[j].x), (int)(YScale * MyList[j].y));
+            }
+
+            G.ResetTransform();
+
+            Matrix myMatrix = new Matrix();
+            myMatrix.Translate(XPixels / 2, YPixels / 2);
+            G.Transform = myMatrix;
+            G.DrawPath(blackPen, graphPath);
+
         }
     }
 }            
