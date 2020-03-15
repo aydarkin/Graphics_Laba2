@@ -1424,5 +1424,27 @@ namespace ILoveBasicLaba2
             pictureBox36.Image = bmap;
 
         }
+
+        private void tabPage38_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //G.Clear(Color.White)
+            //Dim originalBitmap As New Bitmap("c:/Boat.jpg")
+            //Dim sourceRectangle As New Rectangle(0, 0, originalBitmap.Width, _
+            //originalBitmap.Height / 2)
+            //Dim secondBitmap As Bitmap = _
+            //originalBitmap.Clone(sourceRectangle, Imaging.PixelFormat.DontCare)
+            //G.DrawImage(originalBitmap, 10, 10)
+            //G.DrawImage(secondBitmap, 250, 30)
+
+            e.Graphics.Clear(Color.White);
+
+            Bitmap originalBitmap = new Bitmap(Resources.Boat);
+            Rectangle sourceRectangle = new Rectangle(0, 0, originalBitmap.Width, originalBitmap.Height / 2);
+            Bitmap secondBitmap = originalBitmap.Clone(sourceRectangle, System.Drawing.Imaging.PixelFormat.DontCare);
+            e.Graphics.DrawImage(originalBitmap, 10, 10);
+            e.Graphics.DrawImage(secondBitmap, 250, 30);
+        }
     }
 }            
