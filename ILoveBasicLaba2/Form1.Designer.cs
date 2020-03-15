@@ -383,6 +383,7 @@
             this.tabPage18.TabIndex = 9;
             this.tabPage18.Text = "Пример 18";
             this.tabPage18.UseVisualStyleBackColor = true;
+            this.tabPage18.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage18_Paint);
             // 
             // tabPage19
             // 
