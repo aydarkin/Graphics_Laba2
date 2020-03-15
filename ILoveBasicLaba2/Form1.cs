@@ -1230,5 +1230,27 @@ namespace ILoveBasicLaba2
             pictureBox26.Image = img;
 
         }
+
+        private void tabPage28_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim img As Image
+            //img = Image.FromFile("c:\Parad.jpg")
+            //MyPictureBox.Image = img
+
+            //MyPictureBox.Image.RotateFlip(RotateFlipType.Rotate90FlipNone)
+            //MyPictureBox.Invalidate()
+            //Dim tmp As Integer
+            //tmp = MyPictureBox.Width
+            //MyPictureBox.Width = MyPictureBox.Height
+            //MyPictureBox.Width = tmp
+
+            Image img;
+            img = Resources.Parad;
+
+            pictureBox28.Image = img;
+            pictureBox28.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            pictureBox28.Invalidate();
+
+        }
     }
 }            

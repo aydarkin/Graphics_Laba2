@@ -57,6 +57,7 @@
             this.tabPage24 = new System.Windows.Forms.TabPage();
             this.tabPage25 = new System.Windows.Forms.TabPage();
             this.tabPage26 = new System.Windows.Forms.TabPage();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tabPage27 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage28 = new System.Windows.Forms.TabPage();
@@ -90,19 +91,21 @@
             this.tabPage49 = new System.Windows.Forms.TabPage();
             this.tabPage50 = new System.Windows.Forms.TabPage();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.tabPage27.SuspendLayout();
+            this.tabPage28.SuspendLayout();
             this.tabPage35.SuspendLayout();
             this.tabPage37.SuspendLayout();
             this.tabPage41.SuspendLayout();
             this.tabPage43.SuspendLayout();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -477,6 +480,14 @@
             this.tabPage26.UseVisualStyleBackColor = true;
             this.tabPage26.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage26_Paint);
             // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(308, 284);
+            this.pictureBox26.TabIndex = 0;
+            this.pictureBox26.TabStop = false;
+            // 
             // tabPage27
             // 
             this.tabPage27.Controls.Add(this.button3);
@@ -501,6 +512,7 @@
             // 
             // tabPage28
             // 
+            this.tabPage28.Controls.Add(this.pictureBox28);
             this.tabPage28.Location = new System.Drawing.Point(4, 26);
             this.tabPage28.Name = "tabPage28";
             this.tabPage28.Padding = new System.Windows.Forms.Padding(3);
@@ -508,6 +520,7 @@
             this.tabPage28.TabIndex = 9;
             this.tabPage28.Text = "Пример 28";
             this.tabPage28.UseVisualStyleBackColor = true;
+            this.tabPage28.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage28_Paint);
             // 
             // tabPage29
             // 
@@ -849,13 +862,13 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // pictureBox26
+            // pictureBox28
             // 
-            this.pictureBox26.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(308, 284);
-            this.pictureBox26.TabIndex = 0;
-            this.pictureBox26.TabStop = false;
+            this.pictureBox28.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(409, 427);
+            this.pictureBox28.TabIndex = 0;
+            this.pictureBox28.TabStop = false;
             // 
             // Form1
             // 
@@ -872,14 +885,16 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.tabPage27.ResumeLayout(false);
+            this.tabPage28.ResumeLayout(false);
             this.tabPage35.ResumeLayout(false);
             this.tabPage37.ResumeLayout(false);
             this.tabPage41.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -949,6 +964,7 @@
         private System.Windows.Forms.HScrollBar hScrollBar3;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.PictureBox pictureBox28;
     }
 }
 
