@@ -1105,5 +1105,47 @@ namespace ILoveBasicLaba2
             e.Graphics.FillRegion(myBrush, myRegion);
 
         }
+
+        private void tabPage22_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim FirstPath As New GraphicsPath
+            //Dim SecondPath As New GraphicsPath
+
+            //' Создаем эллипс и отображаем его 
+            //'на экране с помощью синего цвета
+            //Dim regionRect As New Rectangle(150, 50, 100, 200)
+            //FirstPath.AddEllipse(regionRect)
+            //pe.Graphics.DrawPath(Pens.Blue, FirstPath)
+
+            //' Создаем область из эллипса
+            //Dim myRegion As New[Region](FirstPath)
+
+            //' Создаем матрицу преобразования и 
+            //'устанавливаем ее на 45 градусов
+            //Dim transformMatrix As New Matrix
+            //transformMatrix.RotateAt(45, New PointF(175, 0))
+            //' Применяем к области преобразование
+            //myRegion.Transform(transformMatrix)
+            //' Выполняем заливку преобразованной области 
+            //'красным цветом и отображаем ее на экране
+            //Dim myBrush As New SolidBrush(Color.Red)
+            //pe.Graphics.FillRegion(myBrush, myRegion)
+
+            var FirstPath = new GraphicsPath();
+
+            var regionRect = new Rectangle(150, 50, 100, 200);
+            FirstPath.AddEllipse(regionRect);
+            e.Graphics.DrawPath(Pens.Blue, FirstPath);
+
+            var myRegion = new Region(FirstPath);
+            var transformMatrix = new Matrix();
+
+            transformMatrix.RotateAt(45, new PointF(175, 0));
+            myRegion.Transform(transformMatrix);
+
+            var myBrush = new SolidBrush(Color.Red);
+            e.Graphics.FillRegion(myBrush, myRegion);
+
+        }
     }
 }            
