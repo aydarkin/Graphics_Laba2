@@ -98,6 +98,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.hScrollBar42 = new System.Windows.Forms.HScrollBar();
             this.vScrollBar42 = new System.Windows.Forms.VScrollBar();
+            this.hScrollBar44 = new System.Windows.Forms.HScrollBar();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -109,6 +110,7 @@
             this.tabPage41.SuspendLayout();
             this.tabPage42.SuspendLayout();
             this.tabPage43.SuspendLayout();
+            this.tabPage44.SuspendLayout();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -696,6 +698,7 @@
             // 
             // tabPage44
             // 
+            this.tabPage44.Controls.Add(this.hScrollBar44);
             this.tabPage44.Location = new System.Drawing.Point(4, 26);
             this.tabPage44.Name = "tabPage44";
             this.tabPage44.Padding = new System.Windows.Forms.Padding(3);
@@ -950,6 +953,16 @@
             this.vScrollBar42.TabIndex = 1;
             this.vScrollBar42.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar42_Scroll);
             // 
+            // hScrollBar44
+            // 
+            this.hScrollBar44.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hScrollBar44.Location = new System.Drawing.Point(3, 515);
+            this.hScrollBar44.Name = "hScrollBar44";
+            this.hScrollBar44.Size = new System.Drawing.Size(729, 21);
+            this.hScrollBar44.TabIndex = 0;
+            this.hScrollBar44.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar44_Scroll);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -972,6 +985,7 @@
             this.tabPage41.ResumeLayout(false);
             this.tabPage42.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
+            this.tabPage44.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
@@ -1056,6 +1070,7 @@
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.VScrollBar vScrollBar42;
         private System.Windows.Forms.HScrollBar hScrollBar42;
+        private System.Windows.Forms.HScrollBar hScrollBar44;
     }
 }
 

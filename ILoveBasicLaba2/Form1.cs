@@ -1495,5 +1495,66 @@ namespace ILoveBasicLaba2
             G.DrawRectangle(MyPen, MyBox);
 
         }
+
+        private void hScrollBar44_Scroll(object sender, ScrollEventArgs e)
+        {
+            //G.Clear(Color.White)
+            //Dim Minimum, Maximum, Value As Integer
+            //Minimum = 0
+            //Maximum = 370
+            //MyHScrollBar.Minimum = Minimum
+            //MyHScrollBar.Maximum = Maximum
+            //MyHScrollBar.SmallChange = 0.1
+            //MyHScrollBar.LargeChange = 10
+            //Value = MyHScrollBar.Value
+            //Dim x, y As Single
+            //x = CSng(MyPictureBox.Width / 2)
+            //y = CSng(MyPictureBox.Height / 2)
+
+            //Dim rotatePoint As New PointF(x, y)
+            //G.ResetTransform()
+
+            //Dim myMatrix As New Matrix
+            //myMatrix.RotateAt(Value, rotatePoint, MatrixOrder.Append)
+            //G.Transform = myMatrix
+
+            //Dim MyPen As Pen = New Pen(Color.Black, 1)
+            //Dim Point1 As New Point((MyPictureBox.Width / 2) - 50, _
+            //(MyPictureBox.Height / 2) - 50)
+            //Dim Point2 As New Point((MyPictureBox.Width / 2) + 50, _
+            //(MyPictureBox.Height / 2) + 50)
+            //GraphicObject.DrawLine(MyPen, Point1, Point2)
+
+            var G = tabPage44.CreateGraphics();
+            G.Clear(Color.White);
+            int Minimum, Maximum, Value;
+
+            Minimum = 0;
+            Maximum = 370;
+
+            hScrollBar44.Minimum = Minimum;
+            hScrollBar44.Maximum = Maximum;
+            hScrollBar44.SmallChange = 1;
+            hScrollBar44.LargeChange = 10;
+
+            Value = hScrollBar44.Value;
+
+            float x = (float)hScrollBar44.Width / 2;
+            float y = (float)hScrollBar44.Height / 2;
+
+            PointF rotatePoint = new PointF(x, y);
+
+            G.ResetTransform();
+
+            var myMatrix = new Matrix();
+            myMatrix.RotateAt(Value, rotatePoint, MatrixOrder.Append);
+            G.Transform = myMatrix;
+
+            Pen MyPen = new Pen(Color.Black, 1);            
+            var Point1 = new Point((hScrollBar44.Width / 2) - 50, (hScrollBar44.Height / 2) - 50);
+            var Point2 = new Point((hScrollBar44.Width / 2) + 50, (hScrollBar44.Height / 2) + 50);
+
+            G.DrawLine(MyPen, Point1, Point2);
+        }
     }
 }            
