@@ -621,6 +621,7 @@
             this.tabPage40.TabIndex = 9;
             this.tabPage40.Text = "Пример 40";
             this.tabPage40.UseVisualStyleBackColor = true;
+            this.tabPage40.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage40_Paint);
             // 
             // tabPage41
             // 

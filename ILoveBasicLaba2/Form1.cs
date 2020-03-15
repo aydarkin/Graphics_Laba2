@@ -1446,5 +1446,29 @@ namespace ILoveBasicLaba2
             e.Graphics.DrawImage(originalBitmap, 10, 10);
             e.Graphics.DrawImage(secondBitmap, 250, 30);
         }
+
+        private void tabPage40_Paint(object sender, PaintEventArgs e)
+        {
+            //G.Clear(Color.White)
+            //Dim myBitmap As New Bitmap("c:/FootBall.jpg")
+            //Dim sourceRectangle As New Rectangle(20, 70, 80, 45)
+            //Dim destRectangle1 As New Rectangle(200, 10, 20, 16)
+            //Dim destRectangle2 As New Rectangle(200, 40, 200, 160)
+            //G.DrawImage(myBitmap, 0, 0)
+            //G.DrawImage(myBitmap, destRectangle1, sourceRectangle, GraphicsUnit.Pixel)
+            //G.DrawImage(myBitmap, destRectangle2, sourceRectangle, GraphicsUnit.Pixel)
+
+            e.Graphics.Clear(Color.White);
+            Bitmap myBitmap = new Bitmap(Resources.FootBall);
+
+            Rectangle sourceRectangle = new Rectangle(20, 70, 80, 45);
+            Rectangle destRectangle1 = new Rectangle(200, 10, 20, 16);
+            Rectangle destRectangle2 = new Rectangle(200, 40, 200, 160);
+
+            e.Graphics.DrawImage(myBitmap, 0, 0);
+            e.Graphics.DrawImage(myBitmap, destRectangle1, sourceRectangle, GraphicsUnit.Pixel);
+            e.Graphics.DrawImage(myBitmap, destRectangle2, sourceRectangle, GraphicsUnit.Pixel);
+
+        }
     }
 }            
