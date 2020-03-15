@@ -1293,5 +1293,64 @@ namespace ILoveBasicLaba2
 
             tabPage32.BackColor = Color.FromArgb(128, 128, 128);
         }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            //MyPictureBox.Image = Image.FromFile("c:/cnn.jpg")
+
+            //Dim bmap As New Bitmap(MyPictureBox.Image)
+            //MyPictureBox.Image = bmap
+            //Dim tempbmp As New Bitmap(MyPictureBox.Image)
+            //Dim DX As Integer = 1
+            //Dim DY As Integer = 1
+            //Dim red, green, blue As Integer
+            //Dim i, j As Integer
+            //For i = DX To.Height - DX - 1
+            //    For j = DY To.Width - DY - 1
+            //        tempbmp.red = 255 - CInt((CInt(.GetPixel(j - 1, i - 1).R)))
+            //        tempbmp.green = 255 - CInt((CInt(.GetPixel(j - 1, i - 1).G)))
+            //        tempbmp.blue = 255 - CInt((CInt(.GetPixel(j - 1, i - 1).B)))
+
+            //        tempbmp.red = Math.Min(Math.Max(red, 0), 255)
+            //        tempbmp.green = Math.Min(Math.Max(green, 0), 255)
+            //        tempbmp.blue = Math.Min(Math.Max(blue, 0), 255)
+
+            //        tempbmp.bmap.SetPixel(j, i, Color.FromArgb(red, green, blue))
+
+            //        If i Mod 10 = 0 Then
+            //            MyPictureBox.Invalidate()
+            //            MyPictureBox.Refresh()
+            //            Me.Text = Int(100 * i / _
+            //            (MyPictureBox.Image.Height - 2)).ToString & "%"
+            //        End If
+            //    Next j
+            //Next i
+            //MyPictureBox.Refresh()
+
+            Bitmap bmap = new Bitmap(pictureBox34.Image);
+            Bitmap tempbmp = new Bitmap(pictureBox34.Image);
+            int DX = 0;
+            int DY = 0;
+            int red;
+            int green;
+            int blue;
+            int i;
+            int j;
+            for (i = DX; i <= tempbmp.Height - DX - 1; i++)
+            {
+                for (j = DY; j <= tempbmp.Width - DY - 1; j++)
+                {
+                    red = 255 - (int)((int)tempbmp.GetPixel(j, i).R);
+                    green = 255 - (int)((int)tempbmp.GetPixel(j, i).G);
+                    blue = 255 - (int)((int)tempbmp.GetPixel(j, i).B);
+                    red = Math.Min(Math.Max(red, 0), 255);
+                    green = Math.Min(Math.Max(green, 0), 255);
+                    blue = Math.Min(Math.Max(blue, 0), 255);
+                    bmap.SetPixel(j, i, Color.FromArgb(red, green, blue));
+                }
+            }
+
+            pictureBox34.Image = bmap;
+        }
     }
 }            

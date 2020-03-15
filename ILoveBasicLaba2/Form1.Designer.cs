@@ -92,12 +92,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.button34 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage26.SuspendLayout();
             this.tabPage27.SuspendLayout();
             this.tabPage28.SuspendLayout();
+            this.tabPage34.SuspendLayout();
             this.tabPage41.SuspendLayout();
             this.tabPage43.SuspendLayout();
             this.tabPage45.SuspendLayout();
@@ -106,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             this.tabPage35.SuspendLayout();
             this.tabPage37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -560,6 +564,8 @@
             // 
             // tabPage34
             // 
+            this.tabPage34.Controls.Add(this.button34);
+            this.tabPage34.Controls.Add(this.pictureBox34);
             this.tabPage34.Location = new System.Drawing.Point(4, 26);
             this.tabPage34.Name = "tabPage34";
             this.tabPage34.Padding = new System.Windows.Forms.Padding(3);
@@ -872,6 +878,26 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::ILoveBasicLaba2.Properties.Resources.cnn;
+            this.pictureBox34.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(399, 357);
+            this.pictureBox34.TabIndex = 0;
+            this.pictureBox34.TabStop = false;
+            // 
+            // button34
+            // 
+            this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button34.Location = new System.Drawing.Point(8, 499);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(139, 32);
+            this.button34.TabIndex = 1;
+            this.button34.Text = "Инверсия цвета";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -889,6 +915,7 @@
             this.tabPage26.ResumeLayout(false);
             this.tabPage27.ResumeLayout(false);
             this.tabPage28.ResumeLayout(false);
+            this.tabPage34.ResumeLayout(false);
             this.tabPage41.ResumeLayout(false);
             this.tabPage43.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
@@ -897,6 +924,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             this.tabPage35.ResumeLayout(false);
             this.tabPage37.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -967,6 +995,8 @@
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.PictureBox pictureBox34;
+        private System.Windows.Forms.Button button34;
     }
 }
 
