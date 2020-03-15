@@ -63,6 +63,16 @@ namespace ILoveBasicLaba2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Atlanta {
+            get {
+                object obj = ResourceManager.GetObject("Atlanta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boy {
             get {
                 object obj = ResourceManager.GetObject("Boy", resourceCulture);

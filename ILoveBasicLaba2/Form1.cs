@@ -1252,5 +1252,37 @@ namespace ILoveBasicLaba2
             pictureBox28.Invalidate();
 
         }
+
+        private void tabPage30_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim Mypoints As PointF() = {
+            //    New Point(0, 0), _
+            //New Point(100, 10), _
+            //New Point(200, 200), New Point(100, 400)}
+
+            //Dim MyPath As New GraphicsPath
+            //MyPath.AddPolygon(Mypoints)
+
+            //Dim G As Graphics
+            //G = MyPictureBox.CreateGraphics
+            //Dim clipRect As New RectangleF(0, 0, 300, 300)
+
+            //G.SetClip(MyPath)
+            //G.DrawImage(Image.FromFile("c:/Atlanta.jpg"), 0, 0)
+
+            PointF[] Mypoints = {
+                new Point(0, 0),
+                new Point(100, 10),
+                new Point(200, 200),
+                new Point(100, 400)
+            };
+            var MyPath = new GraphicsPath();
+            MyPath.AddPolygon(Mypoints);
+
+            //RectangleF clipRect = new RectangleF(0, 0, 300, 300);
+            e.Graphics.SetClip(MyPath);
+            e.Graphics.DrawImage(Resources.Atlanta, 0, 0);
+
+        }
     }
 }            
