@@ -1284,5 +1284,14 @@ namespace ILoveBasicLaba2
             e.Graphics.DrawImage(Resources.Atlanta, 0, 0);
 
         }
+
+        private void tabPage32_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim newColor As Color
+            //newColor = Color.FromArgb(128, 128, 128)
+            //MyPictureBox.BackColor = newColor
+
+            tabPage32.BackColor = Color.FromArgb(128, 128, 128);
+        }
     }
 }            
