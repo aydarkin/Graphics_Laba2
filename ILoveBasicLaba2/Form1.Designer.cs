@@ -90,9 +90,11 @@
             this.tabPage49 = new System.Windows.Forms.TabPage();
             this.tabPage50 = new System.Windows.Forms.TabPage();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage26.SuspendLayout();
             this.tabPage27.SuspendLayout();
             this.tabPage35.SuspendLayout();
             this.tabPage37.SuspendLayout();
@@ -100,6 +102,7 @@
             this.tabPage43.SuspendLayout();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -464,6 +467,7 @@
             // 
             // tabPage26
             // 
+            this.tabPage26.Controls.Add(this.pictureBox26);
             this.tabPage26.Location = new System.Drawing.Point(4, 26);
             this.tabPage26.Name = "tabPage26";
             this.tabPage26.Padding = new System.Windows.Forms.Padding(3);
@@ -471,6 +475,7 @@
             this.tabPage26.TabIndex = 9;
             this.tabPage26.Text = "Пример 26";
             this.tabPage26.UseVisualStyleBackColor = true;
+            this.tabPage26.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage26_Paint);
             // 
             // tabPage27
             // 
@@ -844,6 +849,14 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(308, 284);
+            this.pictureBox26.TabIndex = 0;
+            this.pictureBox26.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -858,6 +871,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage26.ResumeLayout(false);
             this.tabPage27.ResumeLayout(false);
             this.tabPage35.ResumeLayout(false);
             this.tabPage37.ResumeLayout(false);
@@ -865,6 +879,7 @@
             this.tabPage43.ResumeLayout(false);
             this.tabPage45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -933,6 +948,7 @@
         private System.Windows.Forms.HScrollBar hScrollBar2;
         private System.Windows.Forms.HScrollBar hScrollBar3;
         private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.PictureBox pictureBox26;
     }
 }
 

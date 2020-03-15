@@ -1218,5 +1218,17 @@ namespace ILoveBasicLaba2
             graphics.DrawLine(bluePen, 70, 0, 370, 300);
 
         }
+
+        private void tabPage26_Paint(object sender, PaintEventArgs e)
+        {
+            //Dim img As Image
+            //img = Image.FromFile("c:\CheerLady.jpg")
+            //MyPictureBox.Image = img
+
+            Image img;
+            img = Resources.CheerLady;
+            pictureBox26.Image = img;
+
+        }
     }
 }            
